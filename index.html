@@ -53,9 +53,10 @@
 
 <!-- shopline相關css -->
 <style>
-  .header{
+  .header {
     z-index: 100;
   }
+
   .header--desktop .header__container {
     position: fixed;
     background-color: white;
@@ -106,7 +107,7 @@
   }
 
   .CustomPage .quick-cart-price {
-        display: none;
+    display: none;
   }
 </style>
 
@@ -116,12 +117,14 @@
     top: 1%;
     left: 0%;
   }
+
   @media screen and (max-width: 450px) {
     header {
       top: 1%;
       left: 10%;
     }
   }
+
   .tab-pane {
     padding: 0px;
   }
@@ -137,14 +140,35 @@
     padding: 1%;
     margin: 0;
   }
-  .bg_modelCarousel--mid .row > * {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-}
+
+  .bg_modelCarousel--mid .row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+  .sizelinkbtn {
+    position: fixed;
+    right: 0;
+    bottom: 8px;
+    z-index: 99;
+    width: 150px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sizelinkbtn {
+      width: 24%;
+      max-width: 170px;
+    }
+  }
+   /* 彈跳視窗樣式 */
+   .modal-content{
+    box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);
+   }
 </style>
 
 <script src="https://lunanaturalbra.com/hk/lnubhk2/js/wow.min.js"></script>
@@ -199,8 +223,25 @@
     </div>
   </div>
 
+  <!-- 漂浮按鈕 -->
+  <img class="sizelinkbtn"
+    src="https://img.shoplineapp.com/media/image_clips/65027f1639023f001d88651a/original.png?1694662422" alt="">
+  <script>
+    $('.sizelinkbtn').click(function (e) {
+      e.preventDefault();
+      $('html , body').animate({
+        scrollTop: $('#sizelink').offset().top - 60,
+      }, 900);
+    });
+  </script>
+  
   <div id="LP">
-    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/01_banner.png" alt="">
+    <img src="https://img.shoplineapp.com/media/image_clips/650418e2ca114b001114c0bc/original.png?1694767330" alt="">
+    <div class="LD">
+      <span>香港開賣</span>
+      <span class="lastday" id="lastday">9/30</span>
+      <span>前免國際運費</span>
+    </div>
     <section class="bg bg_FV">
       <div class="content">
         <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
@@ -211,7 +252,21 @@
         <img class="FV_light" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_light.webp" alt="">
         <img class="FV_text" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_text.webp" alt="">
       </div>
-      <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/event.png" alt="">
+      <img  id="videolink" style="cursor: pointer;"  src="https://img.shoplineapp.com/media/image_clips/650418e21ff5bf000ecd354c/original.png?1694767330"alt="" style="cursor: pointer;" data-toggle="modal" data-target="#lotterymodal">
+      <div class="modal fade" id="lotterymodal" tabindex="-1" role="dialog" aria-labelledby="LINEPOINTLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content" style="background-color: transparent; border: none">
+          <div class="modal-body mx-auto" style="text-align: center">
+            <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt="" style="width: 100%; position: relative" />
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 7%; right: 8%">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <img src="https://img.shoplineapp.com/media/image_clips/650418e29c84f9001a2ffa7b/original.png?1694767330" alt="">
     </section>
     <section class="bg bg1">
       <div class="content">
@@ -445,7 +500,7 @@
                       <div class="col-md-4">
                         <div class="card">
                           <div class="card-img">
-                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.png">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.webp">
                           </div>
                         </div>
                       </div>
@@ -477,61 +532,61 @@
             <div class="wow animate__fadeInUp animate__animated">
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane" id="pills-mid-1" role="tabpanel" aria-labelledby="pills-mid-1-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/1.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/01.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-2" role="tabpanel" aria-labelledby="pills-mid-2-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/2.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/02.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-3" role="tabpanel" aria-labelledby="pills-mid-3-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/03.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-4" role="tabpanel" aria-labelledby="pills-mid-4-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/4.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/04.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-5" role="tabpanel" aria-labelledby="pills-mid-5-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/5.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/05.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-6" role="tabpanel" aria-labelledby="pills-mid-6-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/6.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/06.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-7" role="tabpanel" aria-labelledby="pills-mid-7-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/7.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/07.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-8" role="tabpanel" aria-labelledby="pills-mid-8-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/8.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/08.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-9" role="tabpanel" aria-labelledby="pills-mid-9-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/9.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/09.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-10" role="tabpanel" aria-labelledby="pills-mid-10-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/10.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/10.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-11" role="tabpanel" aria-labelledby="pills-mid-11-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/11.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/11.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-12" role="tabpanel" aria-labelledby="pills-mid-12-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/12.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/12.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-13" role="tabpanel" aria-labelledby="pills-mid-13-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/13.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/13.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-14" role="tabpanel" aria-labelledby="pills-mid-14-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/14.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/14.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-15" role="tabpanel" aria-labelledby="pills-mid-15-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/15.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/15.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-16" role="tabpanel" aria-labelledby="pills-mid-16-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/16.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-17" role="tabpanel" aria-labelledby="pills-mid-17-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/17.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/17.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid-18" role="tabpanel" aria-labelledby="pills-mid-18-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/18.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/18.webp">
                 </div>
                 <div class="tab-pane active" id="pills-mid-19" role="tabpanel" aria-labelledby="pills-mid-19-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/19.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/19.webp">
                 </div>
               </div>
             </div>
@@ -652,8 +707,8 @@
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-mid-18-tab" data-bs-target="#pills-mid-18"
-                  data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18" aria-selected="false">
+                <button class="nav-link" id="pills-mid-18-tab" data-bs-target="#pills-mid-18" data-bs-toggle="pill"
+                  type="button" role="tab" aria-controls="pills-mid-18" aria-selected="false">
                   <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
                 </button>
               </li>
@@ -680,46 +735,43 @@
         </div>
       </section> -->
       <div id="shopline-section-1691658726756013023f" class="shopline-section ">
-        
+
         <div class="section-width">
           <div class="product-list-custom-padding__1691658726756013023f">
             <div class="product-list__container">
-
-              <div id="product-list__products__1691658726756013023f" class="product-list__products">
-                <div class="product-list__product" product-id="64a62adb0d95b0001ab8460f">
-                  <div class="product-item">
-                    <product-item product-id="64a62adb0d95b0001ab8460f"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-2"
-                        ng-click="sendGaProductClick(&quot;64a62adb0d95b0001ab8460f&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
-                        ga-product="{&quot;id&quot;:&quot;64a62adb0d95b0001ab8460f&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
-                        <div class="boxify-image-wrapper js-quick-boxify-image">
-                          <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w">
-                            </div>
-                            <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
+              <div class="product-list__product" product-id="64a62adb0d95b0001ab8460f">
+                <div class="product-item">
+                  <product-item product-id="64a62adb0d95b0001ab8460f"
+                    ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                    modal-window-class="">
+                    <a href="https://www.lunabrahk.com/products/luna-bra-2?draft=true&amp;debug=true"
+                      ng-click="sendGaProductClick(&quot;64a62adb0d95b0001ab8460f&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
+                      ga-product="{&quot;id&quot;:&quot;64a62adb0d95b0001ab8460f&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
+                      class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
+                      <div class="boxify-image-wrapper js-quick-boxify-image">
+                        <div class="boxify-image js-boxify-image center-contain sl-media ">
+                          <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                              data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 900w"
+                              class="lazyautosizes sl-lazyloaded"
+                              srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 900w">
                           </div>
+                          <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                         </div>
-                        <div class="info-box">
-                          <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
-                            <div class="quick-cart-price   ">
-                              <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
-                            </div> <span
-                              class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
-                              <i class="fa fa-shopping-cart"></i> </span>
-                          </div>
+                      </div>
+                      <div class="info-box ">
+                        <div class="info-box-inner-wrapper">
+                          <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
+                          <div class="quick-cart-price   ">
+                            <div
+                              class="                    global-primary dark-primary price sl-price                                                            ">
+                              NT$1,390 </div>
+                          </div> <span
+                            class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
+                            <i class="fa fa-shopping-cart"></i> </span>
                         </div>
-                      </a>
-                    </product-item>
-                  </div>
+                      </div>
+                    </a>
+                  </product-item>
                 </div>
               </div>
             </div>
@@ -1102,7 +1154,7 @@
                       <div class="col-md-4">
                         <div class="card">
                           <div class="card-img">
-                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.png">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.webp">
                           </div>
                         </div>
                       </div>
@@ -1134,61 +1186,61 @@
             <div class="wow animate__fadeInUp animate__animated">
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane" id="pills-mid2-1" role="tabpanel" aria-labelledby="pills-mid2-1-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/1.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/01.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-2" role="tabpanel" aria-labelledby="pills-mid2-2-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/2.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/02.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-3" role="tabpanel" aria-labelledby="pills-mid2-3-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/03.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-4" role="tabpanel" aria-labelledby="pills-mid2-4-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/4.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/04.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-5" role="tabpanel" aria-labelledby="pills-mid2-5-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/5.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/05.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-6" role="tabpanel" aria-labelledby="pills-mid2-6-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/6.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/06.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-7" role="tabpanel" aria-labelledby="pills-mid2-7-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/7.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/07.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-8" role="tabpanel" aria-labelledby="pills-mid2-8-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/8.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/08.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-9" role="tabpanel" aria-labelledby="pills-mid2-9-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/9.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/09.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-10" role="tabpanel" aria-labelledby="pills-mid2-10-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/10.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/10.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-11" role="tabpanel" aria-labelledby="pills-mid2-11-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/11.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/11.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-12" role="tabpanel" aria-labelledby="pills-mid2-12-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/12.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/12.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-13" role="tabpanel" aria-labelledby="pills-mid2-13-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/13.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/13.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-14" role="tabpanel" aria-labelledby="pills-mid2-14-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/14.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/14.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-15" role="tabpanel" aria-labelledby="pills-mid2-15-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/15.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/15.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-16" role="tabpanel" aria-labelledby="pills-mid2-16-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/16.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-17" role="tabpanel" aria-labelledby="pills-mid2-17-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/17.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/17.webp">
                 </div>
                 <div class="tab-pane" id="pills-mid2-18" role="tabpanel" aria-labelledby="pills-mid2-18-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/18.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/18.webp">
                 </div>
                 <div class="tab-pane active" id="pills-mid2-19" role="tabpanel" aria-labelledby="pills-mid2-19-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/19.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/19.webp">
                 </div>
               </div>
             </div>
@@ -1224,8 +1276,8 @@
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-mid2-4-tab" data-bs-target="#pills-mid2-4"
-                  data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid2-4" aria-selected="false">
+                <button class="nav-link" id="pills-mid2-4-tab" data-bs-target="#pills-mid2-4" data-bs-toggle="pill"
+                  type="button" role="tab" aria-controls="pills-mid2-4" aria-selected="false">
                   <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/4.webp">
                 </button>
               </li>
@@ -1315,8 +1367,8 @@
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-mid2-19-tab" data-bs-target="#pills-mid2-19" data-bs-toggle="pill"
-                  type="button" role="tab" aria-controls="pills-mid2-19" aria-selected="false">
+                <button class="nav-link active" id="pills-mid2-19-tab" data-bs-target="#pills-mid2-19"
+                  data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid2-19" aria-selected="false">
                   <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
                 </button>
               </li>
@@ -1338,44 +1390,45 @@
       </section> -->
       <div id="shopline-section-1691658726756013023f" class="shopline-section ">
         <div class="section-width">
+
           <div class="product-list-custom-padding__1691658726756013023f">
             <div class="product-list__container">
 
-              <div id="product-list__products__1691658726756013023f" class="product-list__products">
-                <div class="product-list__product" product-id="64a62adb0d95b0001ab8460f">
-                  <div class="product-item">
-                    <product-item product-id="64a62adb0d95b0001ab8460f"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-2"
-                        ng-click="sendGaProductClick(&quot;64a62adb0d95b0001ab8460f&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
-                        ga-product="{&quot;id&quot;:&quot;64a62adb0d95b0001ab8460f&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
-                        <div class="boxify-image-wrapper js-quick-boxify-image">
-                          <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w">
-                            </div>
-                            <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
+              <div class="product-list__product" product-id="64a62adb0d95b0001ab8460f">
+                <div class="product-item">
+                  <product-item product-id="64a62adb0d95b0001ab8460f"
+                    ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                    modal-window-class="">
+                    <a href="https://www.lunabrahk.com/products/luna-bra-2?draft=true&amp;debug=true"
+                      ng-click="sendGaProductClick(&quot;64a62adb0d95b0001ab8460f&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
+                      ga-product="{&quot;id&quot;:&quot;64a62adb0d95b0001ab8460f&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
+                      class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
+                      <div class="boxify-image-wrapper js-quick-boxify-image">
+                        <div class="boxify-image js-boxify-image center-contain sl-media ">
+                          <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                              data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png
+                              900w"
+                              class="lazyautosizes sl-lazyloaded"
+                              srcset="hhttps://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png
+                              900w">
                           </div>
+                          <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                         </div>
-                        <div class="info-box">
-                          <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
-                            <div class="quick-cart-price   ">
-                              <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
-                            </div> <span
-                              class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
-                              <i class="fa fa-shopping-cart"></i> </span>
-                          </div>
+                      </div>
+                      <div class="info-box ">
+                        <div class="info-box-inner-wrapper">
+                          <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
+                          <div class="quick-cart-price   ">
+                            <div
+                              class="                    global-primary dark-primary price sl-price                                                            ">
+                              NT$1,390 </div>
+                          </div> <span
+                            class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
+                            <i class="fa fa-shopping-cart"></i> </span>
                         </div>
-                      </a>
-                    </product-item>
-                  </div>
+                      </div>
+                    </a>
+                  </product-item>
                 </div>
               </div>
             </div>
@@ -1416,6 +1469,7 @@
       </div>
     </section>
 
+    <a href="#" id="sizelink"></a>
     <section class="bg bg20">
       <div class="content">
         <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/20.webp" alt="">
@@ -1717,7 +1771,7 @@
                       <div class="col-md-4">
                         <div class="card">
                           <div class="card-img">
-                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.png">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.webp">
                           </div>
                         </div>
                       </div>
@@ -1752,61 +1806,61 @@
             <div class="wow animate__fadeInUp animate__animated">
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane" id="pills-final-1" role="tabpanel" aria-labelledby="pills-final-1-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/1.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/01.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-2" role="tabpanel" aria-labelledby="pills-final-2-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/2.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/02.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-3" role="tabpanel" aria-labelledby="pills-final-3-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/03.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-4" role="tabpanel" aria-labelledby="pills-final-4-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/4.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/04.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-5" role="tabpanel" aria-labelledby="pills-final-5-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/5.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/05.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-6" role="tabpanel" aria-labelledby="pills-final-6-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/6.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/06.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-7" role="tabpanel" aria-labelledby="pills-final-7-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/7.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/07.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-8" role="tabpanel" aria-labelledby="pills-final-8-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/8.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/08.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-9" role="tabpanel" aria-labelledby="pills-final-9-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/9.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/09.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-10" role="tabpanel" aria-labelledby="pills-final-10-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/10.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/10.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-11" role="tabpanel" aria-labelledby="pills-final-11-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/11.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/11.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-12" role="tabpanel" aria-labelledby="pills-final-12-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/12.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/12.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-13" role="tabpanel" aria-labelledby="pills-final-13-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/13.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/13.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-14" role="tabpanel" aria-labelledby="pills-final-14-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/14.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/14.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-15" role="tabpanel" aria-labelledby="pills-final-15-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/15.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/15.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-16" role="tabpanel" aria-labelledby="pills-final-16-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/16.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-17" role="tabpanel" aria-labelledby="pills-final-17-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/17.webp">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/17.webp">
                 </div>
                 <div class="tab-pane" id="pills-final-18" role="tabpanel" aria-labelledby="pills-final-18-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/18.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/18.webp">
                 </div>
                 <div class="tab-pane active" id="pills-final-19" role="tabpanel" aria-labelledby="pills-final-19-tab">
-                  <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/19.png">
+                  <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/modal/19.webp">
                 </div>
               </div>
             </div>
@@ -1861,8 +1915,8 @@
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-final-7-tab" data-bs-target="#pills-final-7"
-                  data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-final-7" aria-selected="true">
+                <button class="nav-link" id="pills-final-7-tab" data-bs-target="#pills-final-7" data-bs-toggle="pill"
+                  type="button" role="tab" aria-controls="pills-final-7" aria-selected="true">
                   <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/7.webp">
                 </button>
               </li>
@@ -1933,8 +1987,8 @@
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-final-19-tab" data-bs-target="#pills-final-19" data-bs-toggle="pill"
-                  type="button" role="tab" aria-controls="pills-final-19" aria-selected="false">
+                <button class="nav-link active" id="pills-final-19-tab" data-bs-target="#pills-final-19"
+                  data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-final-19" aria-selected="false">
                   <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
                 </button>
               </li>
@@ -1951,36 +2005,33 @@
         <div class="section-width">
           <div class="product-list-custom-padding__1691658726756013023f">
             <div class="product-list__container">
-
               <div id="product-list__products__1691658726756013023f" class="product-list__products">
-
                 <div class="product-list__product" product-id="648171c3ea93ed00118a5160">
-
                   <div class="product-item">
                     <product-item product-id="648171c3ea93ed00118a5160"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra"
+                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                      modal-window-class="">
+                      <a href="https://www.lunabrahk.com/products/luna-bra?draft=true&amp;debug=true"
                         ng-click="sendGaProductClick(&quot;648171c3ea93ed00118a5160&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;648171c376b9c90015acff8e\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
                         ga-product="{&quot;id&quot;:&quot;648171c3ea93ed00118a5160&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;648171c376b9c90015acff8e\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
+                        class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
                         <div class="boxify-image-wrapper js-quick-boxify-image">
                           <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21aace60760013010142/900x.webp?source_format=png 900w">
+                            <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                                data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 900w"
+                                class="lazyautosizes sl-lazyloaded"
+                                srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/5.png 900w">
                             </div>
                             <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                           </div>
                         </div>
-                        <div class="info-box">
+                        <div class="info-box ">
                           <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
+                            <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
                             <div class="quick-cart-price   ">
                               <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
+                                class="                    global-primary dark-primary price sl-price                                                            ">
+                                NT$1,390 </div>
                             </div> <span
                               class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
                               <i class="fa fa-shopping-cart"></i> </span>
@@ -1990,32 +2041,33 @@
                     </product-item>
                   </div>
                 </div>
+
                 <div class="product-list__product" product-id="64a62b30f4d4970020bd9281">
                   <div class="product-item">
                     <product-item product-id="64a62b30f4d4970020bd9281"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-2-1-1"
+                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                      modal-window-class="">
+                      <a href="https://www.lunabrahk.com/products/luna-bra-2-1-1?draft=true&amp;debug=true"
                         ng-click="sendGaProductClick(&quot;64a62b30f4d4970020bd9281&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62b302f12e8001840ab01\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
                         ga-product="{&quot;id&quot;:&quot;64a62b30f4d4970020bd9281&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62b302f12e8001840ab01\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
+                        class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
                         <div class="boxify-image-wrapper js-quick-boxify-image">
                           <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb210f35430a0010d2cb65/900x.webp?source_format=png 900w">
+                            <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                                data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 900w"
+                                class="lazyautosizes sl-lazyloaded"
+                                srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/4.png 900w">
                             </div>
                             <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                           </div>
                         </div>
-                        <div class="info-box">
+                        <div class="info-box ">
                           <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
+                            <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
                             <div class="quick-cart-price   ">
                               <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
+                                class="                    global-primary dark-primary price sl-price                                                            ">
+                                NT$1,390 </div>
                             </div> <span
                               class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
                               <i class="fa fa-shopping-cart"></i> </span>
@@ -2025,33 +2077,33 @@
                     </product-item>
                   </div>
                 </div>
+
                 <div class="product-list__product" product-id="64a62b065fb4a70020b4c9a4">
                   <div class="product-item">
                     <product-item product-id="64a62b065fb4a70020b4c9a4"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-2-1"
+                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                      modal-window-class="">
+                      <a href="https://www.lunabrahk.com/products/luna-bra-2-1?draft=true&amp;debug=true"
                         ng-click="sendGaProductClick(&quot;64a62b065fb4a70020b4c9a4&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62b06aeed360018fb5f19\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
                         ga-product="{&quot;id&quot;:&quot;64a62b065fb4a70020b4c9a4&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62b06aeed360018fb5f19\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
+                        class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
                         <div class="boxify-image-wrapper js-quick-boxify-image">
                           <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21660fc70200229f34ba/900x.webp?source_format=png 900w">
+                            <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                                data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 900w"
+                                class="lazyautosizes sl-lazyloaded"
+                                srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/3.png 900w">
                             </div>
                             <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                           </div>
                         </div>
-                        <div class="info-box">
+                        <div class="info-box ">
                           <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
+                            <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
                             <div class="quick-cart-price   ">
                               <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
+                                class="global-primary dark-primary price sl-price                                                            ">
+                                NT$1,390 </div>
                             </div> <span
                               class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
                               <i class="fa fa-shopping-cart"></i> </span>
@@ -2060,33 +2112,37 @@
                       </a>
                     </product-item>
                   </div>
+
                 </div>
                 <div class="product-list__product" product-id="64a62adb0d95b0001ab8460f">
                   <div class="product-item">
                     <product-item product-id="64a62adb0d95b0001ab8460f"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-2"
+                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                      modal-window-class="">
+
+                      <a href="https://www.lunabrahk.com/products/luna-bra-2?draft=true&amp;debug=true"
                         ng-click="sendGaProductClick(&quot;64a62adb0d95b0001ab8460f&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
                         ga-product="{&quot;id&quot;:&quot;64a62adb0d95b0001ab8460f&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;64a62adaaeed36001efb5f09\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
+                        class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
                         <div class="boxify-image-wrapper js-quick-boxify-image">
                           <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb21774d04cb001c7cd9f5/900x.webp?source_format=png 900w">
+                            <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                                data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png
+                                375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 900w"
+                                class="lazyautosizes sl-lazyloaded"
+                                srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png
+                                375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/2.png 900w">
                             </div>
                             <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                           </div>
                         </div>
-                        <div class="info-box">
+                        <div class="info-box ">
                           <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
+                            <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
                             <div class="quick-cart-price   ">
                               <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
+                                class="                    global-primary dark-primary price sl-price                                                            ">
+                                NT$1,390 </div>
                             </div> <span
                               class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
                               <i class="fa fa-shopping-cart"></i> </span>
@@ -2099,35 +2155,38 @@
                 <div class="product-list__product" product-id="6482906c7cab230011bac1a1">
                   <div class="product-item">
                     <product-item product-id="6482906c7cab230011bac1a1"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
-                      <a href="https://nextagetwbra.shoplineapp.com/products/luna-bra-1"
+                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                      modal-window-class="">
+
+                      <a href="https://www.lunabrahk.com/products/luna-bra-1?draft=true&amp;debug=true"
                         ng-click="sendGaProductClick(&quot;6482906c7cab230011bac1a1&quot;, &quot;&quot;, [&quot;{\&quot;key\&quot;:\&quot;6482906c271b730010e17931\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]&amp;#125;&amp;#125;&quot;], &quot;LUNA美媞晚安內衣&quot;)"
                         ga-product="{&quot;id&quot;:&quot;6482906c7cab230011bac1a1&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variations&quot;:&quot;[{\&quot;key\&quot;:\&quot;6482906c271b730010e17931\&quot;,\&quot;sku\&quot;:\&quot;4560449970518\&quot;,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;經典黑\&quot;,\&quot;S\&quot;]}}]&quot;,&quot;title&quot;:&quot;LUNA美媞晚安內衣&quot;}"
-                        class="quick-cart-item js-quick-cart-item    ng-isolate-scope">
-                        <div class="boxify-image-wrapper js-quick-boxify-image multi-image">
+                        class="quick-cart-item js-quick-cart-item             ng-isolate-scope">
+                        <div class="boxify-image-wrapper js-quick-boxify-image">
                           <div class="boxify-image js-boxify-image center-contain sl-media ">
-                            <div class="boxify-image-wrap"> <img sizes="1110px" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/900x.webp?source_format=png 900w"
-                                class="lazyautosizes ls-is-cached sl-lazyloaded"
-                                srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64cb218f0941990019d0315a/900x.webp?source_format=png 900w">
+                            <div class="boxify-image-wrap"> <img sizes="578px" alt="LUNA美媞晚安內衣"
+                                data-srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                900w"
+                                class="lazyautosizes sl-lazyloaded"
+                                srcset="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                375w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                540w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                720w, https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/shopping_cart/1.png
+                                900w">
                             </div>
                             <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
                           </div>
-                          <div class="boxify-image js-boxify-image center-contain sl-media  second-image">
-                            <div class="boxify-image-wrap"> <img sizes="auto" alt="LUNA美媞晚安內衣"
-                                data-srcset="https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/375x.webp?source_format=png 375w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/540x.webp?source_format=png 540w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/720x.webp?source_format=png 720w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/900x.webp?source_format=png 900w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/1080x.webp?source_format=png 1080w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/1296x.webp?source_format=png 1296w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/1512x.webp?source_format=png 1512w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/2160x.webp?source_format=png 2160w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/2960x.webp?source_format=png 2960w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/3260x.webp?source_format=png 3260w, https://shoplineimg.com/63c901da2b5a6d00ef93650b/64a66a50a020b500170ec98d/3860x.webp?source_format=png 3860w"
-                                class="sl-lazy"> </div>
-                            <div class="btn-add-to-cart js-btn-add-to-cart hidden-xs hidden-sm">加入購物車</div>
-                          </div>
                         </div>
-                        <div class="info-box">
+                        <div class="info-box ">
                           <div class="info-box-inner-wrapper">
-                            <div class="title text-primary-color   ">LUNA美媞晚安內衣</div>
+                            <div class="title text-primary-color   ">▲點擊加入購物車▲</div>
                             <div class="quick-cart-price   ">
                               <div
-                                class="                    global-primary dark-primary price sl-price                                                            "
-                                data-currency-twd="NT$1,390" data-currency-hkd="HK$341.29" data-currency="HKD">
-                                HK$341.29</div>
+                                class="                    global-primary dark-primary price sl-price                                                            ">
+                                NT$1,390 </div>
                             </div> <span
                               class="btn-add-to-cart js-btn-add-to-cart mobile-cart visible-xs visible-sm                    ">
                               <i class="fa fa-shopping-cart"></i> </span>
@@ -2169,6 +2228,7 @@
     <section class="bg bg_info4">
       <div class="content">
         <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/info4.webp" alt="">
+        <img src="https://img.shoplineapp.com/media/image_clips/6502c8c194a40600111e9fed/original.png?1694681281" alt="">
       </div>
     </section>
 
@@ -2209,10 +2269,6 @@
     }
   }
 </script>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script> -->
 <script src="https://viage-lp.github.io/shopline_lnubhksta/js/bootstrap_custom.js"></script>
 <!-- <script src="js/bootstrap_custom.js"></script> -->
 <script>
@@ -2243,7 +2299,7 @@
   });
 
   // 點選下方商品列表不跳轉
-  $('a[href*="https://nextagetwbra.shoplineapp.com/products/"]').click(function (e) {
+  $('a[href*="https://www.lunabrahk.com/products/"]').click(function (e) {
     e.preventDefault();
     return;
   });
@@ -2255,4 +2311,5 @@
   } else {
     $("div.title.text-primary-color").text("▲點擊加入購物車▲");
   }
+
 </script>
