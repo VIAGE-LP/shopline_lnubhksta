@@ -152,21 +152,7 @@
     margin-top: var(--bs-gutter-y);
   }
 
-  .sizelinkbtn {
-    position: fixed;
-    right: 0;
-    bottom: 8px;
-    z-index: 99;
-    width: 150px;
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 768px) {
-    .sizelinkbtn {
-      width: 24%;
-      max-width: 170px;
-    }
-  }
+  
 
   /* 彈跳視窗樣式 */
   .modal-content {
@@ -233,18 +219,6 @@
       </ul>
     </div>
   </div> -->
-
-  <!-- 漂浮按鈕 -->
-  <img class="sizelinkbtn"
-    src="https://img.shoplineapp.com/media/image_clips/65027f1639023f001d88651a/original.png?1694662422" alt="">
-  <script>
-    $('.sizelinkbtn').click(function (e) {
-      e.preventDefault();
-      $('html , body').animate({
-        scrollTop: $('#sizelink').offset().top - 60,
-      }, 900);
-    });
-  </script>
 
   <div id="LP">
     <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/banner/banner.webp" alt="">
