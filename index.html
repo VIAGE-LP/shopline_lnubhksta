@@ -3,7 +3,6 @@
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 <!-- <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap-grid.css"> -->
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap_custom.css">
-<!-- <link rel="stylesheet" href="css/bootstrap_custom.css"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/carousel.css">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/loading.css">
@@ -237,24 +236,59 @@
         <img class="FV_light" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_light.webp" alt="">
         <img class="FV_text" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_text.webp" alt="">
       </div>
-      <img id="videolink" style="cursor: pointer;"
-        src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/event.webp" alt="" style="cursor: pointer;"
-        data-toggle="modal" data-target="#lotterymodal">
-      <div class="modal fade" id="lotterymodal" tabindex="-1" role="dialog" aria-labelledby="LINEPOINTLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-md" role="document">
-          <div class="modal-content" style="background-color: transparent; border: none">
-            <div class="modal-body mx-auto" style="text-align: center">
-              <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt=""
-                style="width: 100%; position: relative" />
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                style="position: absolute; top: 7%; right: 8%">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
+
+      <!-- 抽獎功能區塊 start -->
+      <img id="lotteryshow" style="cursor: pointer;"
+      src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/event.webp" alt="" style="cursor: pointer;">
+      <dialog id="infoModal">
+        <div class="lotterybox">
+          <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt="" />
+          <button id="lotteryclose">×</button>
         </div>
-      </div>
+      </dialog>
+      <style>
+        dialog{
+          padding:0;
+          border: none;
+          border-radius: 10px;
+          background-color:transparent;
+        }
+        dialog::backdrop {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        dialog::-webkit-scrollbar {
+          display: none;
+        }
+        .lotterybox{
+          position: relative;
+          width:100%;
+        }
+        #lotteryclose{
+          cursor: pointer;
+          position: absolute;
+          top: 8%;
+          right: 10%;
+          background-color: transparent;
+          border-color: transparent;
+          font-size:xxx-large;
+        }
+        #lotteryclose:focus-visible{
+          outline: none;
+        }
+      </style>
+      <script>
+        let btn=document.querySelector("#lotteryshow");
+        let infoModal=document.querySelector("#infoModal");
+        let close=document.querySelector("#lotteryclose");
+        btn.addEventListener("click", function(){
+          infoModal.showModal();
+        })
+        close.addEventListener("click", function(){
+          infoModal.close();
+        })
+      </script>
+    <!-- 抽獎功能區塊 end -->
+
       <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/coupon.webp" alt="">
     </section>
     <section class="bg bg1">
