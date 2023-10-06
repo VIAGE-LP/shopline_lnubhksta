@@ -23,7 +23,7 @@
     padding: 0px;
     width: 100%;
     margin: 0 auto;
-}
+  }
 
   #shopline-section-1691658726756013023f .section-width {
     width: 100%;
@@ -151,7 +151,7 @@
     margin-top: var(--bs-gutter-y);
   }
 
-  
+
 
   /* 彈跳視窗樣式 */
   .modal-content {
@@ -164,7 +164,7 @@
     top: 66%;
     right: 11%;
     width: 78%;
-}
+  }
 </style>
 
 <script src="https://lunanaturalbra.com/hk/lnubhk2/js/wow.min.js"></script>
@@ -219,7 +219,77 @@
     </div>
   </div> -->
 
+  <!-- 新版timer start -->
+  <link rel="stylesheet" href="https://lunanaturalbra.com/lnub/css/countdown.css" />
+  <style>
+    #cdtimer_day #main-content {
+      top: 50%;
+      left: 70%;
+    }
+
+    @media screen and (max-width: 768px) {
+      #cdtimer_day #main-content {
+        left: 74%;
+      }
+    }
+
+    .SP {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .PC {
+        display: none;
+      }
+
+      .SP {
+        display: block;
+      }
+    }
+  </style>
   <div id="LP">
+
+    <div id="cdtimer">
+      <div class="PC">
+        <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1009.png" alt="キャンペーン終了まで">
+      </div>
+      <div class="SP">
+        <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1009.png" alt="キャンペーン終了まで">
+      </div>
+      <div id="main-content">
+        <div id="countdown" class="countdown">
+          <div class="box">
+            <ul class="timer-box">
+              <li><span class="day"></span><span class="name">天</span></li>
+              <li><span class="hours"></span><span class="name">小時</span></li>
+              <li><span class="minutes"></span><span class="name">分</span></li>
+              <li><span class="seconds"></span><span class="name">秒</span></li>
+              <li><span class="miriseconds"></span><span class="name">　　</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cdtimer_day">
+      <div class="PC">
+        <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1006-1008.png" alt="キャンペーン終了まで">
+      </div>
+      <div class="SP">
+        <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1006-1008.png" alt="キャンペーン終了まで">
+      </div>
+      <div id="main-content">
+        <div id="countdown" class="countdown">
+          <div class="box">
+            <ul class="timer-box">
+              <li><span class="day"></span><span class="name">天</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://lunanaturalbra.com/lnub/js/countdown.js"></script>
+    <!-- 新版timer end -->
+
     <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/banner/banner.webp" alt="">
     <div class="LD">
       <span>香港開賣</span>
@@ -250,7 +320,7 @@
 
       <!-- 抽獎功能區塊 start -->
       <img id="lotteryshow" style="cursor: pointer;"
-      src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/event.webp" alt="" style="cursor: pointer;">
+        src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/event.webp" alt="" style="cursor: pointer;">
       <dialog id="infoModal">
         <div class="lotterybox">
           <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt="" />
@@ -258,47 +328,52 @@
         </div>
       </dialog>
       <style>
-        dialog{
-          padding:0;
+        dialog {
+          padding: 0;
           border: none;
           border-radius: 10px;
-          background-color:transparent;
+          background-color: transparent;
         }
+
         dialog::backdrop {
           background-color: rgba(0, 0, 0, 0.1);
         }
+
         dialog::-webkit-scrollbar {
           display: none;
         }
-        .lotterybox{
+
+        .lotterybox {
           position: relative;
-          width:100%;
+          width: 100%;
         }
-        #lotteryclose{
+
+        #lotteryclose {
           cursor: pointer;
           position: absolute;
           top: 8%;
           right: 10%;
           background-color: transparent;
           border-color: transparent;
-          font-size:xxx-large;
+          font-size: xxx-large;
         }
-        #lotteryclose:focus-visible{
+
+        #lotteryclose:focus-visible {
           outline: none;
         }
       </style>
       <script>
-        let btn=document.querySelector("#lotteryshow");
-        let infoModal=document.querySelector("#infoModal");
-        let close=document.querySelector("#lotteryclose");
-        btn.addEventListener("click", function(){
+        let btn = document.querySelector("#lotteryshow");
+        let infoModal = document.querySelector("#infoModal");
+        let close = document.querySelector("#lotteryclose");
+        btn.addEventListener("click", function () {
           infoModal.showModal();
         })
-        close.addEventListener("click", function(){
+        close.addEventListener("click", function () {
           infoModal.close();
         })
       </script>
-    <!-- 抽獎功能區塊 end -->
+      <!-- 抽獎功能區塊 end -->
 
       <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/coupon.webp" alt="">
     </section>
@@ -784,9 +859,11 @@
                       <div class="content">
                         <img src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer4.webp" alt="">
                         <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                          src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679" alt="">
+                          src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679"
+                          alt="">
                         <a href="#">
-                          <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
+                          <img
+                            class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
                             src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer-btn1.png" alt="">
                         </a>
                       </div>
@@ -1443,7 +1520,7 @@
         </div>
       </section> -->
     </div>
-    
+
     <div id="shopline-section-1691658726756013023f" class="shopline-section ">
       <div class="section-width">
 
@@ -1460,9 +1537,11 @@
                     <div class="content">
                       <img src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer4.webp" alt="">
                       <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                        src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679" alt="">
+                        src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679"
+                        alt="">
                       <a href="#">
-                        <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
+                        <img
+                          class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
                           src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer-btn1.png" alt="">
                       </a>
                     </div>
@@ -2082,22 +2161,24 @@
         <div class="section-width">
           <div class="product-list-custom-padding__1691658726756013023f">
             <div class="product-list__container">
-                <div class="product-list__product" product-id="648171c3ea93ed00118a5160">
+              <div class="product-list__product" product-id="648171c3ea93ed00118a5160">
 
-                  <div class="product-item">
-                    <product-item product-id="648171c3ea93ed00118a5160"
-                      ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
-                      modal-window-class="">
-                      <section class="bg bg_offer1">
-                        <div class="content">
-                          <a href="#">
-                            <img src="https://img.shoplineapp.com/media/image_clips/6513e14ffa42170014fe64f9/original.png?1695801679" alt="" class="btn-add-to-cart js-btn-add-to-cart">
-                          </a>
-                        </div>
-                      </section>
-                    </product-item>
-                  </div>
+                <div class="product-item">
+                  <product-item product-id="648171c3ea93ed00118a5160"
+                    ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                    modal-window-class="">
+                    <section class="bg bg_offer1">
+                      <div class="content">
+                        <a href="#">
+                          <img
+                            src="https://img.shoplineapp.com/media/image_clips/6513e14ffa42170014fe64f9/original.png?1695801679"
+                            alt="" class="btn-add-to-cart js-btn-add-to-cart">
+                        </a>
+                      </div>
+                    </section>
+                  </product-item>
                 </div>
+              </div>
             </div>
           </div>
         </div>
