@@ -11,8 +11,8 @@
 <style>
     /* 隱藏第一個商品列表 */
     div#shopline-section-1691658726756013023f:nth-child(1) {
-    display: none !important;
-  }
+        display: none !important;
+    }
 
     #product-list__products__1691658726756013023f {
 
@@ -219,98 +219,28 @@
     </div>
   </div> -->
 
-    <!-- 新版timer start -->
-    <link rel="stylesheet" href="https://lunanaturalbra.com/lnub/css/countdown.css" />
-    <style>
-        #cdtimer_day #main-content {
-            top: 50%;
-            left: 70%;
-        }
-
-        @media screen and (max-width: 768px) {
-            #cdtimer_day #main-content {
-                left: 74%;
-            }
-        }
-
-        .SP {
-            display: none;
-        }
-
-        @media screen and (max-width: 768px) {
-            .PC {
-                display: none;
-            }
-
-            .SP {
-                display: block;
-            }
-        }
-    </style>
     <div id="LP">
-
-        <div id="cdtimer">
-            <div class="PC">
-                <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1009.png" alt="キャンペーン終了まで">
-            </div>
-            <div class="SP">
-                <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1009.png" alt="キャンペーン終了まで">
-            </div>
-            <div id="main-content">
-                <div id="countdown" class="countdown">
-                    <div class="box">
-                        <ul class="timer-box">
-                            <li><span class="day"></span><span class="name">天</span></li>
-                            <li><span class="hours"></span><span class="name">小時</span></li>
-                            <li><span class="minutes"></span><span class="name">分</span></li>
-                            <li><span class="seconds"></span><span class="name">秒</span></li>
-                            <li><span class="miriseconds"></span><span class="name">　　</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="cdtimer_day">
-            <div class="PC">
-                <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1006-1008.png" alt="キャンペーン終了まで">
-            </div>
-            <div class="SP">
-                <img src="https://lunanaturalbra.com/lnub/images/SP_timer_1006-1008.png" alt="キャンペーン終了まで">
-            </div>
-            <div id="main-content">
-                <div id="countdown" class="countdown">
-                    <div class="box">
-                        <ul class="timer-box">
-                            <li><span class="day"></span><span class="name">天</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://lunanaturalbra.com/lnub/js/countdown.js"></script>
-        <!-- 新版timer end -->
-
-        <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/banner/banner.webp" alt="">
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/banner.png" alt="">
         <div class="LD">
             <span>香港開賣</span>
             <span class="lastday" id="lastday"></span>
             <span>前免國際運費</span>
-            <script>
-                // 自動抓取月份最後一天
-                var nowDate = new Date();
-                var year = nowDate.getFullYear()
-                var month = nowDate.getMonth() + 1;
-                month = month < 10 ? '0' + month : month;
-                var lastDay = new Date(`${year}`, `${month}`, 0);
-                var day = lastDay.getDate();
-                day = day < 10 ? '0' + day : day;
-                $('.lastday').text(`${month}/${day}`);
-            </script>
         </div>
+        <script>
+            // 自動抓取月份最後一天
+            var nowDate = new Date();
+            var year = nowDate.getFullYear()
+            var month = nowDate.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+            var lastDay = new Date(`${year}`, `${month}`, 0);
+            var day = lastDay.getDate();
+            day = day < 10 ? '0' + day : day;
+            $('.lastday').text(`${month}/${day}`);
+        </script>
         <section class="bg bg_FV">
             <div class="content">
                 <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
-                <video class="FV_video" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_video.mp4" playsinline
+                <video class="FV_video" src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/FV_video_3.mp4" playsinline
                     autoplay muted loop></video>
                 <img class="FV_gif" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_BA.gif" alt="">
                 <img class="FV_front" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
@@ -320,8 +250,7 @@
 
             <!-- 抽獎功能區塊 start -->
             <img id="lotteryshow" style="cursor: pointer;"
-                src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/event.webp" alt=""
-                style="cursor: pointer;">
+                src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/event.png" alt="" style="cursor: pointer;">
             <dialog id="infoModal">
                 <div class="lotterybox">
                     <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt="" />
@@ -376,7 +305,7 @@
             </script>
             <!-- 抽獎功能區塊 end -->
 
-            <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/coupon.webp" alt="">
+            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/coupon.png" alt="">
         </section>
         <section class="bg bg1">
             <div class="content">
@@ -1584,17 +1513,6 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="bg bg_midoffer4">
-        <div class="content">
-          <img src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer4.webp" alt="">
-          <img class="midoffer_price wow animate__fadeInUp animate__animated"
-            src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/offer-price1.webp" alt="">
-          <a href="#">
-            <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
-              src="https://lunanaturalbra.com/hk/lnubhk2.bk20230901/imgs/offer/midoffer-btn1.png" alt="">
-          </a>
-        </div>
-      </section> -->
         </div>
 
         <div id="shopline-section-1691658726756013023f" class="shopline-section ">
@@ -2274,7 +2192,7 @@
                                         <section class="bg bg_offer1">
                                             <div class="content">
                                                 <a href="#">
-                                                    <img src="https://img.shoplineapp.com/media/image_clips/6513e14ffa42170014fe64f9/original.png?1695801679"
+                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/offer_all.png"
                                                         alt="" class="btn-add-to-cart js-btn-add-to-cart">
                                                 </a>
                                             </div>
