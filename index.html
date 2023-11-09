@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/countdown.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/carousel.css">
-<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/loading.css">
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/loading_1107.css">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/style.css">
 <!-- shopline offer css -->
 <style>
@@ -51,6 +51,7 @@
             grid-template-rows: initial;
         }
     }
+
 </style>
 
 <!-- shopline相關css -->
@@ -166,6 +167,9 @@
         right: 11%;
         width: 78%;
     }
+    .midoffer_btn1:hover{
+        opacity: 0.8;
+    }
 </style>
 
 <script src="https://lunanaturalbra.com/hk/lnubhk2/js/wow.min.js"></script>
@@ -174,26 +178,109 @@
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
+<body>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#logo-001').fadeIn();
         setTimeout(function () {
             $('.loading-all').fadeOut()
-        }, 650);
+        }, 2000);
     });
 </script>
 
+<!-- 漂浮按鈕 start-->
+<style>
+    .sizelinkbtn {
+        width: 174px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        z-index: 101;
+    }
+
+    .sizelinkbtn .gotop {
+        transform: translate(-8px, 0px);
+        width: 95%;
+        height: auto;
+    }
+
+    .sizelinkbtn .copyButton2 {
+        width: 85%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .sizelinkbtn {
+            width: 35%;
+            max-width: 170px;
+        }
+
+        .sizelinkbtn .gotop {
+            transform: translate(7px, 0px);
+            width: 92%;
+            height: auto;
+        }
+
+        .sizelinkbtn .copyButton2 {
+            transform: translate(30px, 0px);
+            width: 65%;
+            height: auto;
+        }
+    }
+</style>
+<a id="gotop"></a>
+<div class="sizelinkbtn" style="text-align: center">
+    <!-- <a href="#buy"> -->
+    <input class="copyText2" type="text" value="W112380B" style="display: none;">
+    <img class="copyButton2" style="cursor: pointer;"
+        src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/discount.gif">
+    <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/gotop.png">
+    <!-- <p class="people-number">200</p> -->
+</div>
+<script>
+    let copyText2 = document.querySelector(".copyText2");
+    let copyButton2 = document.querySelector(".copyButton2");
+    copyButton2.addEventListener("click", function (e) {
+        //點擊按鈕後選擇文本
+        copyText2.select();
+        copyText2.setSelectionRange(0, 99999);
+        //將文本寫入剪貼簿
+        navigator.clipboard.writeText(copyText2.value);
+        // Alert the copied text
+        alert("恭喜你獲得NT$80(≈HKD$20)折扣金！\n您已複製以下優惠代碼，於購物車「優惠代碼」欄位輸入，\n即可享總結帳金額再折NT$80(≈HKD$20)\n限時優惠，把握機會。\n優惠代碼： " + copyText2.value);
+        if ($(window).scrollTop() > $('#sizelink').offset().top) {
+            e.preventDefault()
+        } else {
+            $('html , body').animate({
+                scrollTop: $('#sizelink').offset().top,
+            }, 900);
+        }
+    });
+    let discount = document.querySelector(".gotop");
+    discount.addEventListener("click", function (e) {
+        if ($(window).scrollTop() > $('#sizelink').offset().top) {
+            e.preventDefault()
+        } else {
+            $('html , body').animate({
+                scrollTop: $('#sizelink').offset().top,
+            }, 900);
+        }
+    });
+
+</script>
+
+<!-- 漂浮按鈕 end -->
+
 <div id="wrapper">
     <div class="loading-all">
-        <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/logo.png">
-        <p class="loading_txt">優惠價格loading...</p>
-        <div>
-            <div class="loading-outer">
-                <div class="loading-inner">
-
-                </div>
-            </div>
+      <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/logo.svg">
+      <p class="loading_txt"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/loading_txt.png"></p>
+      <div>
+        <div class="loading-outer">
+          <div class="loading-inner">
+          </div>
         </div>
+      </div>
     </div>
     <!--手機漢堡menu-->
     <!-- <div id="hamburger">
@@ -219,42 +306,13 @@
       </ul>
     </div>
   </div> -->
-       <!-- 新版timer -->
-          <div class="cdtimer_box">
-            <div id="cdtimer">
-              <div class="countdown">
-                <picture>
-                  <!-- 圖片大小高度限制50px,寬度小於443px -->
-                  <img class="timer-title" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/timer/sp_timer_title.png" alt="キャンペーン終了まで">
-                </picture>
-                <div id="countdown" class="main-content">
-                  <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
-                  <div class="timer-box"><span class="hours number"></span><span class="name">小時</span></div>
-                  <div class="timer-box"><span class="minutes number"></span><span class="name">分</span></div>
-                  <div class="timer-box"><span class="seconds number"></span><span class="name">秒</span></div>
-                  <div class="timer-box"><span class="miriseconds number"></span><span class="name">　　</span></div>
-                </div>
-              </div>
-            </div>
-            <div id="cdtimer_day">
-              <div class="countdown">
-                <picture>
-                  <!-- 圖片大小高度限制50px,寬度小於443px -->
-                  <img class="timer-title" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/timer/sp_timer_title.png" alt="キャンペーン終了まで">
-                </picture>
-                <div id="countdown" class="main-content">
-                  <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
     <div id="LP">
-        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/banner.png" alt="">
-        <div class="LD">
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/banner.gif" alt="" class="lotteryshow">
+        <!--<div class="LD">
             <span>此網頁限定</span>
-            <!-- <span class="lastday" id="lastday"></span>-->
+            <span class="lastday" id="lastday"></span>
             <span>10/30 前免國際運費</span>
-        </div>
+        </div>-->
         <!-- <script>
             // 自動抓取月份最後一天
             var nowDate = new Date();
@@ -278,15 +336,14 @@
             </div>
 
             <!-- 抽獎功能區塊 start -->
-            <img id="lotteryshow" style="cursor: pointer;"
-                src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/event.png" alt="" style="cursor: pointer;">
+            <!-- <img class="lotteryshow" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/event.png" alt="">
             <dialog id="infoModal">
                 <div class="lotterybox">
                     <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/modal/lottery.png" alt="" />
                     <button id="lotteryclose">×</button>
                 </div>
-            </dialog>
-            <style>
+            </dialog> -->
+            <!-- <style>
                 dialog {
                     padding: 0;
                     border: none;
@@ -320,9 +377,9 @@
                 #lotteryclose:focus-visible {
                     outline: none;
                 }
-            </style>
-            <script>
-                let btn = document.querySelector("#lotteryshow");
+            </style> -->
+            <!-- <script>
+                let btn = document.querySelector(".lotteryshow");
                 let infoModal = document.querySelector("#infoModal");
                 let close = document.querySelector("#lotteryclose");
                 btn.addEventListener("click", function () {
@@ -331,10 +388,15 @@
                 close.addEventListener("click", function () {
                     infoModal.close();
                 })
-            </script>
+
+                // 進入網頁12秒自動開啟彈跳視窗
+                // setTimeout(() => {
+                    // infoModal.showModal();
+                // }, 12000)
+            </script> -->
             <!-- 抽獎功能區塊 end -->
 
-            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/coupon.png" alt="">
+            <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/coupon.png" alt=""> -->
         </section>
         <section class="bg bg1">
             <div class="content">
@@ -857,10 +919,10 @@
                 <div class="section-width">
                     <div class="product-list-custom-padding__1691658726756013023f">
                         <div class="product-list__container">
-                            <div class="product-list__product" product-id="6513edb153958f001d042434">
+                            <div class="product-list__product" product-id="6548b3235ee1b1002309956a">
 
                                 <div class="product-item">
-                                    <product-item product-id="6513edb153958f001d042434"
+                                    <product-item product-id="6548b3235ee1b1002309956a"
                                         ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                         class="ng-scope quick-cart-mobile" modal-window-class="">
                                         <section class="bg bg_midoffer4">
@@ -868,7 +930,7 @@
                                                 <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
                                                     alt="">
                                                 <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                                                    src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679"
+                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/original.png"
                                                     alt="">
                                                 <a href="#">
                                                     <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
@@ -1550,10 +1612,10 @@
                 <div class="product-list-custom-padding__1691658726756013023f">
                     <div class="product-list__container">
 
-                        <div class="product-list__product" product-id="6513edb153958f001d042434">
+                        <div class="product-list__product" product-id="6548b3235ee1b1002309956a">
 
                             <div class="product-item">
-                                <product-item product-id="6513edb153958f001d042434"
+                                <product-item product-id="6548b3235ee1b1002309956a"
                                     ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                     class="ng-scope quick-cart-mobile" modal-window-class="">
                                     <section class="bg bg_midoffer4">
@@ -1561,7 +1623,7 @@
                                             <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
                                                 alt="">
                                             <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                                                src="https://img.shoplineapp.com/media/image_clips/6513e14f76cdbf001df12ac2/original.png?1695801679"
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/original.png"
                                                 alt="">
                                             <a href="#">
                                                 <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
@@ -2212,16 +2274,16 @@
                 <div class="section-width">
                     <div class="product-list-custom-padding__1691658726756013023f">
                         <div class="product-list__container">
-                            <div class="product-list__product" product-id="6513edb153958f001d042434">
+                            <div class="product-list__product" product-id="6548b3235ee1b1002309956a">
 
                                 <div class="product-item">
-                                    <product-item product-id="6513edb153958f001d042434"
+                                    <product-item product-id="6548b3235ee1b1002309956a"
                                         ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                         class="ng-scope quick-cart-mobile" modal-window-class="">
                                         <section class="bg bg_offer1">
                                             <div class="content">
                                                 <a href="#">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/offer_all.png"
+                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/offer_all.png"
                                                         alt="" class="btn-add-to-cart js-btn-add-to-cart">
                                                 </a>
                                             </div>
@@ -2267,7 +2329,6 @@
         </section>
     </div>
 </div>
-
 <script>
     $(document).ready(function () {
         /*手機切換漢堡選單*/
@@ -2327,13 +2388,13 @@
 
 <!-- 抓取網址參數存到cookie -->
 <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
-<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script>
+<!-- <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
+<!-- <script>
     let getUrlString = location.href;
     let url = new URL(getUrlString);
     let url_cookie = url.search;
     $.cookie('url_cookie', url_cookie , { expires: 1, path: '/' });
-</script>
+</script> -->
 
 <script>
     // 點選左上角logo不跳轉
@@ -2347,7 +2408,6 @@
         e.preventDefault();
         return;
     });
-
     // 提示購物車按鈕電腦版/手機版
     var width = $(window).width();
     if (width <= 1000) {
@@ -2355,52 +2415,6 @@
     } else {
         $("div.title.text-primary-color").text("▲點擊加入購物車▲");
     }
-//倒數計時器
-const countdown = ()=>{
-  const now = new Date();
-  //倒數計時開始時間
-  const target_start = new Date('2023/10/25 00:00:00'); 
-  const differ_start = target_start.getTime() - now.getTime();
-  //倒數計時開始區間
-  const target_mid_start = new Date('2023/10/25 00:00:00'); 
-  const differ_mid_start = target_mid_start.getTime() - now.getTime();
-  //倒數計時結束區間
-  const target_mid_end = new Date('2023/10/29 23:59:59'); 
-  const differ_mid_end = target_mid_end.getTime() - now.getTime();
-  //倒數計時結束時間
-  const target_end = new Date('2023/10/30 23:59:59'); 
-  const differ_end = target_end.getTime() - now.getTime();
-// console.log(differ_end)
-//  console.log(differ_start)
-// console.log(differ_mid_start)
-// console.log(differ_mid_end)
 
-if((differ_end > 0) && (differ_start < 0) && ((differ_mid_start > 0) || (differ_mid_end < 0))){
-  $("#cdtimer").show();
-  $("#cdtimer_day").hide();
-}else if((differ_end > 0) && (differ_start < 0) && (differ_mid_start < 0) && (differ_mid_end > 0)){
-  $("#cdtimer").hide();
-  $("#cdtimer_day").show();
-}else if((differ_end < 0)){
-  $("#cdtimer").hide();
-  $("#cdtimer_day").hide();
-}
 
-  const ms = Math.floor(differ_end );
-  const sec = Math.floor(differ_end  / 1000 % 60);
-  const min = Math.floor(differ_end / 1000 / 60 % 60);
-  const hour = Math.floor(differ_end / 1000 / 60 / 60 % 24);
-  const day = Math.floor(differ_end / 1000 / 60 / 60 / 24);
-
-  document.querySelector('#countdown .miriseconds').textContent = String(ms).slice(-3, -1);
-  document.querySelector('#countdown .seconds').textContent = String(sec).padStart(2, '0');
-  document.querySelector('#countdown .minutes').textContent = String(min).padStart(2, '0');
-  document.querySelector('#countdown .hours').textContent = String(hour).padStart(2, '0');
-  document.querySelectorAll('#countdown .day').textContent = String(day).padStart(2, '0');
-  for(i=0;i<=document.querySelectorAll('#countdown .day').length;i++){
-    if(document.querySelectorAll('#countdown .day')[i]!=undefined)
-    document.querySelectorAll('#countdown .day')[i].textContent = String(day).padStart(2, '0');
-  }
-}
-setInterval(countdown, 1);
 </script>

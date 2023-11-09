@@ -1,40 +1,59 @@
 <!-- 漂浮按鈕 start-->
-<style>
+<!-- <style>
     .sizelinkbtn {
+        width: 174px;
         position: fixed;
-        right: 0;
-        bottom: 8px;
-        z-index: 110;
-        width: 150px;
-        cursor: pointer;
+        right: 0px;
+        bottom: 0px;
+        z-index: 101;
     }
 
-    .sizelinkbtn img {
-        width: 100%;
+    .sizelinkbtn .gotop {
+        transform: translate(-8px, 0px);
+        width: 95%;
+        height: auto;
     }
 
-    @media screen and (max-width: 768px) {
+    .sizelinkbtn .copyButton2 {
+        width: 85%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
         .sizelinkbtn {
-            width: 24%;
+            width: 35%;
             max-width: 170px;
         }
+
+        .sizelinkbtn .gotop {
+            transform: translate(7px, 0px);
+            width: 92%;
+            height: auto;
+        }
+
+        .sizelinkbtn .copyButton2 {
+            transform: translate(30px, 0px);
+            width: 65%;
+            height: auto;
+        }
     }
-</style>
-<div class="sizelinkbtn">
-    <img src="https://img.shoplineapp.com/media/image_clips/6513f3e8492b7e0023225424/original.png?1695806440" alt="">
-</div>
-<script>
-    $('.sizelinkbtn').click(function (e) {
-        e.preventDefault();
-        infoModal.showModal();
-        $('html , body').animate({
-            scrollTop: $('#sizelink').offset().top - 60,
-        }, 900);
+</style> -->
+<!-- <div class="sizelinkbtn" style="text-align: center">
+    <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/gotop.png">
+</div> -->
+<!-- <script>
+    let discount = document.querySelector(".gotop");
+    discount.addEventListener("click", function (e) {
+        if ($(window).scrollTop() > $('#sizelink').offset().top) {
+            e.preventDefault()
+        } else {
+            $('html , body').animate({
+                scrollTop: $('#sizelink').offset().top,
+            }, 900);
+        }
     });
-</script>
+</script> -->
 <!-- 漂浮按鈕 end -->
-
-
 
 <style>
     .footer-grid {
