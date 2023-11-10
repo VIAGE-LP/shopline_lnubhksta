@@ -3,7 +3,8 @@
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 <!-- <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap-grid.css"> -->
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/countdown.css">
+<link rel="stylesheet" href="https://lunanaturalbra.com/lnub/css/countdown.css">
+<!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/countdown.css"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/carousel.css">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/loading_1107.css">
@@ -90,7 +91,7 @@
     }
 
     #wrapper {
-        margin-top: 103px;
+        margin-top: 125px;
     }
 
     @media screen and (max-width: 1200px) {
@@ -267,20 +268,19 @@
     });
 
 </script>
-
 <!-- 漂浮按鈕 end -->
-
-<div id="wrapper">
-    <div class="loading-all">
-      <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/logo.svg">
-      <p class="loading_txt"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/loading_txt.png"></p>
-      <div>
-        <div class="loading-outer">
-          <div class="loading-inner">
-          </div>
+<div class="loading-all">
+    <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/logo.svg">
+    <p class="loading_txt"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/loading_txt.png"></p>
+    <div>
+      <div class="loading-outer">
+        <div class="loading-inner">
         </div>
       </div>
     </div>
+  </div>
+
+<div id="wrapper">
     <!--手機漢堡menu-->
     <!-- <div id="hamburger">
     <header>
@@ -305,6 +305,51 @@
       </ul>
     </div>
   </div> -->
+
+  <!-- 新版timer -->
+  <style>
+    #cdtimer, #cdtimer_day {
+        width: 100%;
+        max-width:1000px;
+    }
+     #cdtimer .timer-box .number, #cdtimer_day .timer-box .number{
+        font-family: Impact, Charcoal;
+        font-size:5.5rem;
+    }
+    @media screen and (max-width: 576px) {
+        #cdtimer .timer-box .number, #cdtimer_day .timer-box .number{
+            font-size: 4rem;
+    }
+    }
+  </style>
+  <div class="cdtimer_box">
+    <div id="cdtimer">
+      <div class="countdown">
+        <picture>
+          <!-- 圖片大小高度限制50px,寬度小於443px -->
+          <img class="timer-title" src="https://lunanaturalbra.com/lnub/images/timer/sp_timer_title.png" alt="キャンペーン終了まで">
+        </picture>
+        <div id="countdown" class="main-content">
+          <div class="timer-box"><span class="day number" style="font-family: Impact, Charcoal;"></span><span class="name">天</span></div>
+          <div class="timer-box"><span class="hours number" style="font-family: Impact, Charcoal;"></span><span class="name">小時</span></div>
+          <div class="timer-box"><span class="minutes number" style="font-family: Impact, Charcoal;"></span><span class="name">分</span></div>
+          <div class="timer-box"><span class="seconds number" style="font-family: Impact, Charcoal;"></span><span class="name">秒</span></div>
+          <!-- <div class="timer-box"><span class="miriseconds number"></span><span class="name">　　</span></div> -->
+        </div>
+      </div>
+    </div>
+    <div id="cdtimer_day">
+      <div class="countdown">
+        <picture>
+          <!-- 圖片大小高度限制50px,寬度小於443px -->
+          <img class="timer-title" src="https://lunanaturalbra.com/lnub/images/timer/timer_title_day.png" alt="キャンペーン終了まで">
+        </picture>
+        <div id="countdown" class="main-content">
+          <div class="timer-box"><span class="day number" style="font-family: Impact, Charcoal;"></span><span class="name">天</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
     <div id="LP">
         <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/banner.gif" alt="" class="lotteryshow">
         <!--<div class="LD">
@@ -2417,3 +2462,4 @@
 
 
 </script>
+<script src="https://lunanaturalbra.com/lnub/js/countdown.js"></script>
