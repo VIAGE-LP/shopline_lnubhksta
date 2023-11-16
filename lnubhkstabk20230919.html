@@ -227,6 +227,17 @@
             <span class="lastday" id="lastday">9/30</span>
             <span>前免國際運費</span>
         </div>
+        <script>
+            // 自動抓取月份最後一天
+            var nowDate = new Date();
+            var year = nowDate.getFullYear()
+            var month = nowDate.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+            var lastDay = new Date(`${year}`, `${month}`, 0);
+            var day = lastDay.getDate();
+            day = day < 10 ? '0' + day : day;
+            $('.lastday').text(`${month}/${day}`);
+        </script>
         <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/01_banner.png" alt=""> -->
         <section class="bg bg_FV">
             <div class="content">
@@ -782,7 +793,7 @@
                                                 <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
                                                     alt="">
                                                 <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1113/original.png"
+                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1116/original.png"
                                                     alt="">
                                                 <a href="#">
                                                     <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
@@ -1483,7 +1494,7 @@
                                                 <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
                                                     alt="">
                                                 <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1113/original.png"
+                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1116/original.png"
                                                     alt="">
                                                 <a href="#">
                                                     <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
@@ -2136,20 +2147,7 @@
                                     <product-item product-id="6513edb153958f001d042434"
                                         ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                         class="ng-scope quick-cart-mobile" modal-window-class="">
-                                        <section class="bg bg_midoffer4">
-                                            <div class="content">
-                                                <img src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
-                                                    alt="">
-                                                <img class="midoffer_price wow animate__fadeInUp animate__animated"
-                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1113/original.png"
-                                                    alt="">
-                                                <a href="#">
-                                                    <img class="midoffer_btn1 wow animate__fadeInUp animate__animated btn-add-to-cart js-btn-add-to-cart"
-                                                        src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn1.png"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                        </section>
+                                        <img class="btn-add-to-cart js-btn-add-to-cart" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1116/offer_all.png" alt="" style="cursor: pointer;">
                                     </product-item>
                                 </div>
                             </div>
