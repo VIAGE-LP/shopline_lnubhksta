@@ -272,11 +272,12 @@
     <!-- <div class="discountLayout">
         <div class="discountBtn">
             <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1222/discountBtn.gif" alt="">
-        </div>
+        </div>-->
         <p id="event_couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">2324HK150L</p>
-        <div class="discountContent copybtn" style="cursor: pointer;"></div>
-    </div> -->
-    <!-- <script>
+        <div class="discountContent copybtn" style="cursor: pointer;">
+        </div>
+    </div>
+    <script>
         // 折扣碼開合
         $(".discountLayout").click(function (e) {
             $(this).toggleClass("active");
@@ -295,16 +296,16 @@
 
             confirm(`恭喜您成功複製新客NT$150(≒HKD$35)折扣碼！\n此為３日限定折扣，有效期限至2023年12月27日止。敬請把握機會！\n請於結帳頁面「使用優惠代碼」輸入，即可享總結帳金額再折NT$150(≒HKD$35)。\n優惠代碼 : ${text}`)
         });
-    </script> -->
-    <!-- 側邊點擊後 滑出複製coupon end-->
+    // </script>
+    <!-- 側邊點擊後 滑出複製coupon end-->-->
 
     <div id="LP">
-        <!-- <div class="LD">
+        <div class="LD">
             <span>香港開賣</span>
             <span class="lastday" id="lastday">9/30</span>
             <span>前免國際運費</span>
-        </div> -->
-        <!-- <script>
+        </div>
+        <script>
             // 自動抓取月份最後一天
             var nowDate = new Date();
             var year = nowDate.getFullYear()
@@ -314,9 +315,9 @@
             var day = lastDay.getDate();
             day = day < 10 ? '0' + day : day;
             $('.lastday').text(`${month}/${day}`);
-        </script> -->
-        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1116/banner_coupon.gif" alt="" style="position: fixed;z-index: 10;width: 100%;max-width: 1000px;">
-        <section class="bg bg_FV" style="margin-top:20%;">
+        </script>
+        <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/01_banner.png" alt=""> -->
+        <section class="bg bg_FV">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
                 <video class="FV_video" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_video.mp4" playsinline
