@@ -315,8 +315,8 @@
             day = day < 10 ? '0' + day : day;
             $('.lastday').text(`${month}/${day}`);
         </script> -->
-        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1222/01_banner.png" alt="">
-        <section class="bg bg_FV">
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1222/01_banner.png" alt="" style="position: fixed;z-index: 10;width: 100%;max-width: 1000px;">
+        <section class="bg bg_FV" style="margin-top:20%;">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
                 <video class="FV_video" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_video.mp4" playsinline
