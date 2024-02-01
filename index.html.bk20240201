@@ -420,22 +420,22 @@
     <!-- 側邊點擊後 滑出複製coupon end-->
 
     <div id="LP">
-        <!-- <div class="LD">
-            <span>香港限定</span>
-            <span class="lastday" id="lastday"></span>
-            <span>前免國際運費</span>
-        </div>
-        <script>
-            // 自動抓取月份最後一天
-            var nowDate = new Date();
-            var year = nowDate.getFullYear()
-            var month = nowDate.getMonth() + 1;
-            month = month < 10 ? '0' + month : month;
-            var lastDay = new Date(`${year}`, `${month}`, 0);
-            var day = lastDay.getDate();
-            day = day < 10 ? '0' + day : day;
-            $('.lastday').text(`${month}/${day}`);
-        </script> -->
+           <div class="LD">
+        <span>香港限定</span>
+        <span class="lastday" id="lastday"></span>
+        <span>前免國際運費</span>
+    </div>
+    <script>
+        // 自動抓取月份最後一天
+        var nowDate = new Date();
+        var year = nowDate.getFullYear()
+        var month = nowDate.getMonth() + 1;
+        month = month < 10 ? '0' + month : month;
+        var lastDay = new Date(`${year}`, `${month}`, 0);
+        var day = lastDay.getDate();
+        day = day < 10 ? '0' + day : day;
+        $('.lastday').text(`${month}/${day}`);
+    </script>
         <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/01_banner.png" alt="">
         <section class="bg bg_FV">
             <div class="content">
@@ -448,8 +448,7 @@
                 <img class="FV_text" data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_text.webp" alt="">
             </div>
             <!-- 抽獎功能區塊 start -->
-            <img class="lotteryshow" style="cursor: pointer;"
-                src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/coupon.png" alt="">
+            <img class="lotteryshow" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/coupon.png" alt="">
             <dialog id="infoModal">
                 <div class="lotterybox">
                     <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/lottery-2.png" alt="" />
@@ -504,7 +503,7 @@
 
                 // 進入網頁12秒自動開啟彈跳視窗
                 // setTimeout(() => {
-                // infoModal.showModal();
+                    // infoModal.showModal();
                 // }, 12000)
             </script>
             <!-- 抽獎功能區塊 end -->
