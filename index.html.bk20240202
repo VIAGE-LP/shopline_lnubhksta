@@ -149,6 +149,12 @@
         }
     }
 
+    .bg_colorBtn--mid {
+        top: 5%;
+        left: 10%;
+        width: 80%;
+    }
+
     .nav-pill_new .nav-item {
         width: calc(100%/5);
         padding: 1%;
@@ -311,19 +317,18 @@
     });
 </script>
 
-<div id="wrapper">
-    <div class="loading-all">
-        <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/logo.png">
-        <p class="loading_txt">優惠價格loading...</p>
-        <div>
-            <div class="loading-outer">
-                <div class="loading-inner">
+<div class="loading-all">
+    <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/logo.png">
+    <p class="loading_txt">優惠價格loading...</p>
+    <div>
+        <div class="loading-outer">
+            <div class="loading-inner">
 
-                </div>
             </div>
         </div>
     </div>
-
+</div>
+<div id="wrapper">
     <!-- 漂浮按鈕 -->
     <img class="sizelinkbtn"
         src="https://img.shoplineapp.com/media/image_clips/6513f3e8492b7e0023225424/original.png?1695806440" alt="">
@@ -336,10 +341,88 @@
         });
     </script>
 
+    <!-- 側邊點擊後 滑出複製coupon start-->
+    <style>
+        .discountLayout {
+            box-shadow: -2px 2px 5px #0000008a;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            right: -563px;
+            bottom: 200px;
+            z-index: 100;
+            transition: right 1s;
+        }
+
+        .discountLayout.active {
+            right: 0px;
+            transition: right 1s;
+        }
+
+        .discountContent {
+            background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs_1222/discountContent_PC.png);
+            background-repeat: no-repeat;
+            width: 563px;
+        }
+
+        .discountText {
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: absolute;
+            left: 200px;
+            bottom: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .discountLayout {
+                right: -263px;
+            }
+
+            .discountContent {
+                background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs_1222/discountContent_SP.png);
+                width: 263px;
+            }
+
+            .discountText {
+                margin: 16px;
+                left: 60px;
+                bottom: 20px;
+            }
+        }
+    </style>
+    <!-- <div class="discountLayout">
+        <div class="discountBtn">
+            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_01/01_banner.png" alt="">
+        </div>
+        <p id="event_couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">2324HK150L</p>
+        <div class="discountContent copybtn" style="cursor: pointer;"></div>
+    </div> -->
+    <!-- <script>
+        // 折扣碼開合
+        $(".discountLayout").click(function (e) {
+            $(this).toggleClass("active");
+        });
+
+        // copy折扣碼 
+        $(".copybtn").on("click", function () {
+            var text = '2324HK150L';
+            var textarea = document.getElementById("event_couponcode");
+            // 賦值
+            textarea.innerText = text;
+            // 選中
+            window.getSelection().selectAllChildren(textarea);
+            // 複製
+            document.execCommand('copy', true);
+
+            confirm(`恭喜您成功複製新客NT$150(≒HKD$35)折扣碼！\n此為３日限定折扣，有效期限至2023年12月27日止。敬請把握機會！\n請於結帳頁面「使用優惠代碼」輸入，即可享總結帳金額再折NT$150(≒HKD$35)。\n優惠代碼 : ${text}`)
+        });
+    </script> -->
+    <!-- 側邊點擊後 滑出複製coupon end-->
+
     <div id="LP">
-        <div class="LD">
-            <span>香港開賣</span>
-            <span class="lastday" id="lastday">9/30</span>
+        <!-- <div class="LD">
+            <span>香港限定</span>
+            <span class="lastday" id="lastday"></span>
             <span>前免國際運費</span>
         </div>
         <script>
@@ -352,25 +435,86 @@
             var day = lastDay.getDate();
             day = day < 10 ? '0' + day : day;
             $('.lastday').text(`${month}/${day}`);
-        </script>
-        <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/01_banner.png" alt=""> -->
+        </script> -->
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/01_banner.png" alt="">
         <section class="bg bg_FV">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
                 <video class="FV_video" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_video.mp4" playsinline
                     autoplay muted loop></video>
-                <img class="FV_gif" data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/FV_BA.gif" alt="">
+                <img class="FV_gif" data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_BA.gif" alt="">
                 <img class="FV_front" data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
                 <img class="FV_light" data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_light.webp" alt="">
                 <img class="FV_text" data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_text.webp" alt="">
             </div>
-            <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/event.png" alt=""> -->
+            <!-- 抽獎功能區塊 start -->
+            <img class="lotteryshow" style="cursor: pointer;"
+                src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/coupon.png" alt="">
+            <dialog id="infoModal">
+                <div class="lotterybox">
+                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0126/lottery-2.png" alt="" />
+                    <button id="lotteryclose">×</button>
+                </div>
+            </dialog>
+            <style>
+                dialog {
+                    padding: 0;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: transparent;
+                }
+
+                dialog::backdrop {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+
+                dialog::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .lotterybox {
+                    position: relative;
+                    width: 100%;
+                }
+
+                #lotteryclose {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 8%;
+                    right: 10%;
+                    background-color: transparent;
+                    border-color: transparent;
+                    font-size: xxx-large;
+                }
+
+                #lotteryclose:focus-visible {
+                    outline: none;
+                }
+            </style>
+            <script>
+                let btn = document.querySelector(".lotteryshow");
+                let infoModal = document.querySelector("#infoModal");
+                let close = document.querySelector("#lotteryclose");
+                btn.addEventListener("click", function () {
+                    infoModal.showModal();
+                })
+                close.addEventListener("click", function () {
+                    infoModal.close();
+                })
+
+                // 進入網頁12秒自動開啟彈跳視窗
+                // setTimeout(() => {
+                // infoModal.showModal();
+                // }, 12000)
+            </script>
+            <!-- 抽獎功能區塊 end -->
         </section>
         <section class="bg bg1">
             <div class="content">
                 <video data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/1.mp4" playsinline autoplay muted
                     loop></video>
             </div>
+
         </section>
 
         <section class="bg bg2">
@@ -396,9 +540,9 @@
                 <img class="block3_dialog wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/3-dialog.webp" alt="">
                 <img class="block3_IG1 wow animate__fadeInUp animate__animated"
-                    data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/3-IG1.gif" alt="">
+                    data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/3-IG1.gif" alt="">
                 <img class="block3_IG2 wow animate__fadeInUp animate__animated"
-                    data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/3-IG2.gif" alt="">
+                    data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/3-IG2.gif" alt="">
                 <img class="block3_IG3 wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/3-IG3.webp" alt="">
                 <img class="block3_IG4 wow animate__fadeInUp animate__animated"
@@ -650,10 +794,8 @@
                             <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer2.webp" alt="">
 
                             <!-- model圖(中間offer) -->
-                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__ animated"
-                                style="visibility: visible; animation-name: fadeInUp;">
-                                <div class="wow animate__fadeInUp animate__"
-                                    style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__animated">
+                                <div class="wow animate__fadeInUp animate__animated">
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane" id="pills-mid-1" role="tabpanel"
                                             aria-labelledby="pills-mid-1-tab">
@@ -668,7 +810,7 @@
                                         <div class="tab-pane" id="pills-mid-3" role="tabpanel"
                                             aria-labelledby="pills-mid-3-tab">
                                             <img
-                                                data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/3.webp">
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
                                         </div>
                                         <div class="tab-pane" id="pills-mid-4" role="tabpanel"
                                             aria-labelledby="pills-mid-4-tab">
@@ -733,7 +875,7 @@
                                         <div class="tab-pane" id="pills-mid-16" role="tabpanel"
                                             aria-labelledby="pills-mid-16-tab">
                                             <img
-                                                data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/16.webp">
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
                                         </div>
                                         <div class="tab-pane" id="pills-mid-17" role="tabpanel"
                                             aria-labelledby="pills-mid-17-tab">
@@ -753,32 +895,31 @@
                                 </div>
                             </div>
 
-                            <img class="midoffer_item1 wow animate__fadeInUp animate__ animated"
+                            <img class="midoffer_item1 wow animate__fadeInUp animate__animated"
                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item2.webp" alt=""
-                                style="bottom: 2%; visibility: visible; animation-name: fadeInUp;">
+                                style="bottom: 2%;">
                         </div>
                     </section>
                     <div class="color_right">
                         <div class="PC_color_btn_box">
                             <div class="price_text_box">
-                                <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                                <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                                 <p class="price_text">選購5件，1件低至</p>
-                                <p class="discount_price_text">HKD$265<span
-                                        style="word-break: keep-all;">(NT$1021)</span>
+                                <p class="discount_price_text">HKD$248<span
+                                        style="word-break: keep-all;">(NT$955)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$95</p>
+                                <p class="discount_price_text">現省HKD$112</p>
                             </div>
-                            <img class="wow animate__fadeInUp animate__ animated"
-                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt=""
-                                style="visibility: visible; animation-name: fadeInUp;">
+                            <img class=" wow animate__fadeInUp animate__animated"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                             <section class="bg bg_midoffer3" style="margin-bottom:5%;">
                                 <div class="content d-flex justify-content-center">
                                     <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
-                                    <div class="wow animate__fadeInUp animate__ animated"
-                                        style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
+                                    <div class=" wow animate__fadeInUp animate__animated" style="width: 90%;padding-left: 32px;padding-right: 32px;border-radius: 10px;
+                            background: #ffe9de;margin-top: 8px;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-1-tab"
@@ -943,15 +1084,14 @@
                 </div>
                 <div class="SP_color_btn_box">
                     <div class="price_text_box">
-                        <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                        <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                         <span class="price_text">選購5件，1件低至</span>
-                        <span class="discount_price_text">HKD$265(NT$1021)</span>
-                        <p class="discount_price_text">現省HKD$95</p>
+                        <span class="discount_price_text">HKD$248(NT$955)</span>
+                        <p class="discount_price_text">現省HKD$112</p>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img style="width: 90%; visibility: visible; animation-name: fadeInUp;"
-                            class=" wow animate__fadeInUp animate__animated animated"
+                        <img style="width: 90%;" class=" wow animate__fadeInUp animate__animated"
                             src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                     </div>
                     <section class="bg bg_midoffer3" style="margin-bottom:5%;">
@@ -959,8 +1099,8 @@
                             <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                             <!-- 顏色挑選按鈕(中間offer) -->
-                            <div class=" wow animate__fadeInUp animate__animated animated"
-                                style="width: 96%; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; padding-left: 16px; padding-right: 16px; visibility: visible; animation-name: fadeInUp;">
+                            <div class=" wow animate__fadeInUp animate__animated" style="width: 96%;border-radius: 10px;
+                background: #ffe9de;margin-top: 8px;padding-left: 16px;padding-right: 16px;">
                                 <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
                                         <button class="nav-link" id="pills-mid-1-tab" data-bs-target="#pills-mid-1"
@@ -1125,10 +1265,10 @@
                     <div class="section-width">
                         <div class="product-list-custom-padding__1691658726756013023f">
                             <div class="product-list__container">
-                                <div class="product-list__product" product-id="6513edb153958f001d042434">
+                                <div class="product-list__product" product-id="65b30ab8dcd890001a2969cd">
 
                                     <div class="product-item">
-                                        <product-item product-id="6513edb153958f001d042434"
+                                        <product-item product-id="65b30ab8dcd890001a2969cd"
                                             ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                             class="ng-scope quick-cart-mobile" modal-window-class="">
                                             <section class="bg bg_midoffer4">
@@ -1141,9 +1281,8 @@
                                                     <div class="cart_btn_layout">
                                                         <a href="#">
                                                             <img class="animate__animated animate__pulse animate__infinite btn-add-to-cart js-btn-add-to-cart color-add-btn"
-                                                                alt=""
-                                                                src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp"
-                                                                style="opacity: 1;">
+                                                                data-src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp"
+                                                                alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1156,11 +1295,12 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <section class="bg bg4-1">
             <div class="content">
-                <img data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/4-1.webp" alt="">
+                <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/4-1.webp" alt="">
                 <img class="block4_title wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/4-title.webp" alt="">
                 <img class="block4_item1 wow animate__fadeInUp animate__animated"
@@ -1172,7 +1312,7 @@
 
         <section class="bg bg4-2">
             <div class="content">
-                <img data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/4-2.webp" alt="">
+                <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/4-2.webp" alt="">
                 <img class="block4_item3 wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/4-item3.webp" alt="">
             </div>
@@ -1230,11 +1370,11 @@
                 <img class="block8_title wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/8-title.webp" alt="">
                 <img class="block8_item1 wow animate__fadeInUp animate__animated"
-                    data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/8-item1.webp" alt="">
+                    data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/8-item1.webp" alt="">
             </div>
         </section>
 
-        <!-- <section class="bg bg9">
+        <section class="bg bg9">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/9.webp" alt="">
                 <img class="block9_title1 wow animate__fadeInUp animate__animated"
@@ -1244,7 +1384,7 @@
                 <img class="block9_item1 wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/9-item1.webp" alt="">
             </div>
-        </section> -->
+        </section>
 
         <div id="target2"></div>
         <section class="bg bg10">
@@ -1300,7 +1440,7 @@
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/14-title1.webp" alt="">
             </div>
         </section>
-        <!-- <section class="bg bg14">
+        <section class="bg bg14">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/14.webp" alt="">
                 <img class="block14_item1 wow animate__fadeInUp animate__animated"
@@ -1312,7 +1452,7 @@
                 <img class="block14_item3 wow animate__fadeInUp animate__animated"
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/14-item3.webp" alt="">
             </div>
-        </section> -->
+        </section>
 
         <section class="bg bg15">
             <div class="content">
@@ -1583,10 +1723,8 @@
                             <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer2.webp" alt="">
 
                             <!-- model圖(中間offer) -->
-                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__ animated"
-                                style="visibility: visible; animation-name: fadeInUp;">
-                                <div class="wow animate__fadeInUp animate__"
-                                    style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__animated">
+                                <div class="wow animate__fadeInUp animate__animated">
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane" id="pills-mid-1" role="tabpanel"
                                             aria-labelledby="pills-mid-1-tab">
@@ -1601,7 +1739,7 @@
                                         <div class="tab-pane" id="pills-mid-3" role="tabpanel"
                                             aria-labelledby="pills-mid-3-tab">
                                             <img
-                                                data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/3.webp">
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
                                         </div>
                                         <div class="tab-pane" id="pills-mid-4" role="tabpanel"
                                             aria-labelledby="pills-mid-4-tab">
@@ -1666,7 +1804,7 @@
                                         <div class="tab-pane" id="pills-mid-16" role="tabpanel"
                                             aria-labelledby="pills-mid-16-tab">
                                             <img
-                                                data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/16.webp">
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
                                         </div>
                                         <div class="tab-pane" id="pills-mid-17" role="tabpanel"
                                             aria-labelledby="pills-mid-17-tab">
@@ -1686,32 +1824,31 @@
                                 </div>
                             </div>
 
-                            <img class="midoffer_item1 wow animate__fadeInUp animate__ animated"
+                            <img class="midoffer_item1 wow animate__fadeInUp animate__animated"
                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item2.webp" alt=""
-                                style="bottom: 2%; visibility: visible; animation-name: fadeInUp;">
+                                style="bottom: 2%;">
                         </div>
                     </section>
                     <div class="color_right">
                         <div class="PC_color_btn_box">
                             <div class="price_text_box">
-                                <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                                <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                                 <p class="price_text">選購5件，1件低至</p>
-                                <p class="discount_price_text">HKD$265<span
-                                        style="word-break: keep-all;">(NT$1021)</span>
+                                <p class="discount_price_text">HKD$248<span
+                                        style="word-break: keep-all;">(NT$955)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$95</p>
+                                <p class="discount_price_text">現省HKD$112</p>
                             </div>
-                            <img class="wow animate__fadeInUp animate__ animated"
-                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt=""
-                                style="visibility: visible; animation-name: fadeInUp;">
+                            <img class=" wow animate__fadeInUp animate__animated"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                             <section class="bg bg_midoffer3" style="margin-bottom:5%;">
                                 <div class="content d-flex justify-content-center">
                                     <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
-                                    <div class="wow animate__fadeInUp animate__ animated"
-                                        style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
+                                    <div class=" wow animate__fadeInUp animate__animated" style="width: 90%;padding-left: 32px;padding-right: 32px;border-radius: 10px;
+                            background: #ffe9de;margin-top: 8px;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-1-tab"
@@ -1876,15 +2013,14 @@
                 </div>
                 <div class="SP_color_btn_box">
                     <div class="price_text_box">
-                        <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                        <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                         <span class="price_text">選購5件，1件低至</span>
-                        <span class="discount_price_text">HKD$265(NT$1021)</span>
-                        <p class="discount_price_text">現省HKD$95</p>
+                        <span class="discount_price_text">HKD$248(NT$955)</span>
+                        <p class="discount_price_text">現省HKD$112</p>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img style="width: 90%; visibility: visible; animation-name: fadeInUp;"
-                            class=" wow animate__fadeInUp animate__animated animated"
+                        <img style="width: 90%;" class=" wow animate__fadeInUp animate__animated"
                             src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                     </div>
                     <section class="bg bg_midoffer3" style="margin-bottom:5%;">
@@ -1892,8 +2028,8 @@
                             <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                             <!-- 顏色挑選按鈕(中間offer) -->
-                            <div class=" wow animate__fadeInUp animate__animated animated"
-                                style="width: 96%; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; padding-left: 16px; padding-right: 16px; visibility: visible; animation-name: fadeInUp;">
+                            <div class=" wow animate__fadeInUp animate__animated" style="width: 96%;border-radius: 10px;
+                background: #ffe9de;margin-top: 8px;padding-left: 16px;padding-right: 16px;">
                                 <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
                                         <button class="nav-link" id="pills-mid-1-tab" data-bs-target="#pills-mid-1"
@@ -2058,10 +2194,10 @@
                     <div class="section-width">
                         <div class="product-list-custom-padding__1691658726756013023f">
                             <div class="product-list__container">
-                                <div class="product-list__product" product-id="6513edb153958f001d042434">
+                                <div class="product-list__product" product-id="65b30ab8dcd890001a2969cd">
 
                                     <div class="product-item">
-                                        <product-item product-id="6513edb153958f001d042434"
+                                        <product-item product-id="65b30ab8dcd890001a2969cd"
                                             ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                             class="ng-scope quick-cart-mobile" modal-window-class="">
                                             <section class="bg bg_midoffer4">
@@ -2074,9 +2210,8 @@
                                                     <div class="cart_btn_layout">
                                                         <a href="#">
                                                             <img class="animate__animated animate__pulse animate__infinite btn-add-to-cart js-btn-add-to-cart color-add-btn"
-                                                                alt=""
-                                                                src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp"
-                                                                style="opacity: 1;">
+                                                                data-src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp"
+                                                                alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -2482,185 +2617,284 @@
                             <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer2.webp" alt="">
 
                             <!-- model圖(中間offer) -->
-                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__animated" style="visibility: hidden; animation-name: none;">
-                                <div class="wow animate__fadeInUp animate__animated" style="visibility: hidden; animation-name: none;">
+                            <div class="bg_modelImg--mid wow animate__fadeInUp animate__animated">
+                                <div class="wow animate__fadeInUp animate__animated">
                                     <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane" id="pills-mid-1" role="tabpanel" aria-labelledby="pills-mid-1-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/1.webp">
+                                        <div class="tab-pane" id="pills-mid-1" role="tabpanel"
+                                            aria-labelledby="pills-mid-1-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/1.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-2" role="tabpanel" aria-labelledby="pills-mid-2-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/2.webp">
+                                        <div class="tab-pane" id="pills-mid-2" role="tabpanel"
+                                            aria-labelledby="pills-mid-2-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/2.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-3" role="tabpanel" aria-labelledby="pills-mid-3-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/3.webp">
+                                        <div class="tab-pane" id="pills-mid-3" role="tabpanel"
+                                            aria-labelledby="pills-mid-3-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/3.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-4" role="tabpanel" aria-labelledby="pills-mid-4-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/4.webp">
+                                        <div class="tab-pane" id="pills-mid-4" role="tabpanel"
+                                            aria-labelledby="pills-mid-4-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/4.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-5" role="tabpanel" aria-labelledby="pills-mid-5-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/5.webp">
+                                        <div class="tab-pane" id="pills-mid-5" role="tabpanel"
+                                            aria-labelledby="pills-mid-5-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/5.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-6" role="tabpanel" aria-labelledby="pills-mid-6-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/6.webp">
+                                        <div class="tab-pane" id="pills-mid-6" role="tabpanel"
+                                            aria-labelledby="pills-mid-6-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/6.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-7" role="tabpanel" aria-labelledby="pills-mid-7-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/7.webp">
+                                        <div class="tab-pane" id="pills-mid-7" role="tabpanel"
+                                            aria-labelledby="pills-mid-7-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/7.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-8" role="tabpanel" aria-labelledby="pills-mid-8-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/8.webp">
+                                        <div class="tab-pane" id="pills-mid-8" role="tabpanel"
+                                            aria-labelledby="pills-mid-8-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/8.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-9" role="tabpanel" aria-labelledby="pills-mid-9-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/9.webp">
+                                        <div class="tab-pane" id="pills-mid-9" role="tabpanel"
+                                            aria-labelledby="pills-mid-9-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/9.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-10" role="tabpanel" aria-labelledby="pills-mid-10-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/10.webp">
+                                        <div class="tab-pane" id="pills-mid-10" role="tabpanel"
+                                            aria-labelledby="pills-mid-10-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/10.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-11" role="tabpanel" aria-labelledby="pills-mid-11-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/11.webp">
+                                        <div class="tab-pane" id="pills-mid-11" role="tabpanel"
+                                            aria-labelledby="pills-mid-11-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/11.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-12" role="tabpanel" aria-labelledby="pills-mid-12-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/12.webp">
+                                        <div class="tab-pane" id="pills-mid-12" role="tabpanel"
+                                            aria-labelledby="pills-mid-12-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/12.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-13" role="tabpanel" aria-labelledby="pills-mid-13-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/13.webp">
+                                        <div class="tab-pane" id="pills-mid-13" role="tabpanel"
+                                            aria-labelledby="pills-mid-13-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/13.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-14" role="tabpanel" aria-labelledby="pills-mid-14-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/14.webp">
+                                        <div class="tab-pane" id="pills-mid-14" role="tabpanel"
+                                            aria-labelledby="pills-mid-14-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/14.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-15" role="tabpanel" aria-labelledby="pills-mid-15-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/15.webp">
+                                        <div class="tab-pane" id="pills-mid-15" role="tabpanel"
+                                            aria-labelledby="pills-mid-15-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/15.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-16" role="tabpanel" aria-labelledby="pills-mid-16-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk3/imgs/16.webp">
+                                        <div class="tab-pane" id="pills-mid-16" role="tabpanel"
+                                            aria-labelledby="pills-mid-16-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/16.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-17" role="tabpanel" aria-labelledby="pills-mid-17-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/17.webp">
+                                        <div class="tab-pane" id="pills-mid-17" role="tabpanel"
+                                            aria-labelledby="pills-mid-17-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/17.webp">
                                         </div>
-                                        <div class="tab-pane" id="pills-mid-18" role="tabpanel" aria-labelledby="pills-mid-18-tab">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/18.webp">
+                                        <div class="tab-pane" id="pills-mid-18" role="tabpanel"
+                                            aria-labelledby="pills-mid-18-tab">
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/18.webp">
                                         </div>
-                                        <div class="tab-pane active" id="pills-mid-19" role="tabpanel" aria-labelledby="pills-mid-19-tab">
+                                        <div class="tab-pane active" id="pills-mid-19" role="tabpanel"
+                                            aria-labelledby="pills-mid-19-tab">
                                             <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/model/19.webp">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <img class="midoffer_item1 wow animate__fadeInUp animate__animated" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item2.webp" alt="" style="bottom: 2%; visibility: hidden; animation-name: none;">
+                            <img class="midoffer_item1 wow animate__fadeInUp animate__animated"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item2.webp" alt=""
+                                style="bottom: 2%;">
                         </div>
                     </section>
                     <div class="color_right">
                         <div class="PC_color_btn_box">
                             <div class="price_text_box">
-                                <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                                <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                                 <p class="price_text">選購5件，1件低至</p>
-                                <p class="discount_price_text">HKD$265<span style="word-break: keep-all;">(NT$1021)</span>
+                                <p class="discount_price_text">HKD$248<span
+                                        style="word-break: keep-all;">(NT$955)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$95</p>
+                                <p class="discount_price_text">現省HKD$112</p>
                             </div>
-                            <img class=" wow animate__fadeInUp animate__animated" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="" style="visibility: hidden; animation-name: none;">
+                            <img class=" wow animate__fadeInUp animate__animated"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                             <section class="bg bg_midoffer3" style="margin-bottom:5%;">
                                 <div class="content d-flex justify-content-center">
                                     <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
-                                    <div class=" wow animate__fadeInUp animate__animated" style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: hidden; animation-name: none;">
+                                    <div class=" wow animate__fadeInUp animate__animated" style="width: 90%;padding-left: 32px;padding-right: 32px;border-radius: 10px;
+                            background: #ffe9de;margin-top: 8px;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-1-tab" data-bs-target="#pills-mid-1" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-1" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/1.webp">
+                                                <button class="nav-link" id="pills-mid-1-tab"
+                                                    data-bs-target="#pills-mid-1" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-1" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/1.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-2-tab" data-bs-target="#pills-mid-2" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-2" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/2.webp">
+                                                <button class="nav-link" id="pills-mid-2-tab"
+                                                    data-bs-target="#pills-mid-2" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-2" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/2.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-3-tab" data-bs-target="#pills-mid-3" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-3" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/3.webp">
+                                                <button class="nav-link" id="pills-mid-3-tab"
+                                                    data-bs-target="#pills-mid-3" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-3" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/3.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-4-tab" data-bs-target="#pills-mid-4" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-4" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/4.webp">
+                                                <button class="nav-link" id="pills-mid-4-tab"
+                                                    data-bs-target="#pills-mid-4" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-4" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/4.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-5-tab" data-bs-target="#pills-mid-5" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-5" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/5.webp">
+                                                <button class="nav-link" id="pills-mid-5-tab"
+                                                    data-bs-target="#pills-mid-5" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-5" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/5.webp">
                                                 </button>
                                             </li>
 
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-6-tab" data-bs-target="#pills-mid-6" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-6" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/6.webp">
+                                                <button class="nav-link" id="pills-mid-6-tab"
+                                                    data-bs-target="#pills-mid-6" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-6" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/6.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-7-tab" data-bs-target="#pills-mid-7" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-7" aria-selected="true">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/7.webp">
+                                                <button class="nav-link" id="pills-mid-7-tab"
+                                                    data-bs-target="#pills-mid-7" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-7" aria-selected="true">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/7.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-8-tab" data-bs-target="#pills-mid-8" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-8" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/8.webp">
+                                                <button class="nav-link" id="pills-mid-8-tab"
+                                                    data-bs-target="#pills-mid-8" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-8" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/8.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-9-tab" data-bs-target="#pills-mid-9" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-9" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/9.webp">
+                                                <button class="nav-link" id="pills-mid-9-tab"
+                                                    data-bs-target="#pills-mid-9" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-9" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/9.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-10-tab" data-bs-target="#pills-mid-10" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-10" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
+                                                <button class="nav-link" id="pills-mid-10-tab"
+                                                    data-bs-target="#pills-mid-10" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-10" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-11-tab" data-bs-target="#pills-mid-11" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-11" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
+                                                <button class="nav-link" id="pills-mid-11-tab"
+                                                    data-bs-target="#pills-mid-11" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-11" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-12-tab" data-bs-target="#pills-mid-12" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-12" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
+                                                <button class="nav-link" id="pills-mid-12-tab"
+                                                    data-bs-target="#pills-mid-12" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-12" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-13-tab" data-bs-target="#pills-mid-13" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-13" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
+                                                <button class="nav-link" id="pills-mid-13-tab"
+                                                    data-bs-target="#pills-mid-13" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-13" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-14-tab" data-bs-target="#pills-mid-14" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-14" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
+                                                <button class="nav-link" id="pills-mid-14-tab"
+                                                    data-bs-target="#pills-mid-14" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-14" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-15-tab" data-bs-target="#pills-mid-15" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-15" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
+                                                <button class="nav-link" id="pills-mid-15-tab"
+                                                    data-bs-target="#pills-mid-15" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-15" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-16-tab" data-bs-target="#pills-mid-16" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-16" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
+                                                <button class="nav-link" id="pills-mid-16-tab"
+                                                    data-bs-target="#pills-mid-16" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-16" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-17-tab" data-bs-target="#pills-mid-17" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-17" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
+                                                <button class="nav-link" id="pills-mid-17-tab"
+                                                    data-bs-target="#pills-mid-17" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-17" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-mid-18-tab" data-bs-target="#pills-mid-18" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
+                                                <button class="nav-link" id="pills-mid-18-tab"
+                                                    data-bs-target="#pills-mid-18" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-18" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="pills-mid-19-tab" data-bs-target="#pills-mid-19" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-19" aria-selected="false">
-                                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
+                                                <button class="nav-link active" id="pills-mid-19-tab"
+                                                    data-bs-target="#pills-mid-19" data-bs-toggle="pill" type="button"
+                                                    role="tab" aria-controls="pills-mid-19" aria-selected="false">
+                                                    <img
+                                                        src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
                                                 </button>
                                             </li>
 
@@ -2673,116 +2907,175 @@
                 </div>
                 <div class="SP_color_btn_box">
                     <div class="price_text_box">
-                        <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
+                        <h2 class="price_text_title" style="color:#000000">LUNA新春早鳥優惠</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
                         <span class="price_text">選購5件，1件低至</span>
-                        <span class="discount_price_text">HKD$265(NT$1021)</span>
-                        <p class="discount_price_text">現省HKD$95</p>
+                        <span class="discount_price_text">HKD$248(NT$955)</span>
+                        <p class="discount_price_text">現省HKD$112</p>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img style="width: 90%; visibility: visible; animation-name: fadeInUp;" class=" wow animate__fadeInUp animate__animated animated" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
+                        <img style="width: 90%;" class=" wow animate__fadeInUp animate__animated"
+                            src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt="">
                     </div>
                     <section class="bg bg_midoffer3" style="margin-bottom:5%;">
                         <div class="content d-flex justify-content-center">
                             <!-- <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer3.webp" alt=""> -->
 
                             <!-- 顏色挑選按鈕(中間offer) -->
-                            <div class=" wow animate__fadeInUp animate__animated animated" style="width: 96%; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; padding-left: 16px; padding-right: 16px; visibility: visible; animation-name: fadeInUp;">
+                            <div class=" wow animate__fadeInUp animate__animated" style="width: 96%;border-radius: 10px;
+                background: #ffe9de;margin-top: 8px;padding-left: 16px;padding-right: 16px;">
                                 <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-1-tab" data-bs-target="#pills-mid-1" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-1" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/1.webp">
+                                        <button class="nav-link" id="pills-mid-1-tab" data-bs-target="#pills-mid-1"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-1"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/1.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-2-tab" data-bs-target="#pills-mid-2" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-2" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/2.webp">
+                                        <button class="nav-link" id="pills-mid-2-tab" data-bs-target="#pills-mid-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-2"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/2.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-3-tab" data-bs-target="#pills-mid-3" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-3" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/3.webp">
+                                        <button class="nav-link" id="pills-mid-3-tab" data-bs-target="#pills-mid-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-3"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/3.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-4-tab" data-bs-target="#pills-mid-4" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-4" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/4.webp">
+                                        <button class="nav-link" id="pills-mid-4-tab" data-bs-target="#pills-mid-4"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-4"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/4.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-5-tab" data-bs-target="#pills-mid-5" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-5" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/5.webp">
+                                        <button class="nav-link" id="pills-mid-5-tab" data-bs-target="#pills-mid-5"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-5"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/5.webp">
                                         </button>
                                     </li>
 
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-6-tab" data-bs-target="#pills-mid-6" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-6" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/6.webp">
+                                        <button class="nav-link" id="pills-mid-6-tab" data-bs-target="#pills-mid-6"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-6"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/6.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-7-tab" data-bs-target="#pills-mid-7" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-7" aria-selected="true">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/7.webp">
+                                        <button class="nav-link" id="pills-mid-7-tab" data-bs-target="#pills-mid-7"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-7"
+                                            aria-selected="true">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/7.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-8-tab" data-bs-target="#pills-mid-8" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-8" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/8.webp">
+                                        <button class="nav-link" id="pills-mid-8-tab" data-bs-target="#pills-mid-8"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-8"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/8.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-9-tab" data-bs-target="#pills-mid-9" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-9" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/9.webp">
+                                        <button class="nav-link" id="pills-mid-9-tab" data-bs-target="#pills-mid-9"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-9"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/9.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-10-tab" data-bs-target="#pills-mid-10" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-10" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
+                                        <button class="nav-link" id="pills-mid-10-tab" data-bs-target="#pills-mid-10"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-10"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-11-tab" data-bs-target="#pills-mid-11" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-11" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
+                                        <button class="nav-link" id="pills-mid-11-tab" data-bs-target="#pills-mid-11"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-11"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-12-tab" data-bs-target="#pills-mid-12" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-12" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
+                                        <button class="nav-link" id="pills-mid-12-tab" data-bs-target="#pills-mid-12"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-12"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-13-tab" data-bs-target="#pills-mid-13" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-13" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
+                                        <button class="nav-link" id="pills-mid-13-tab" data-bs-target="#pills-mid-13"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-13"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-14-tab" data-bs-target="#pills-mid-14" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-14" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
+                                        <button class="nav-link" id="pills-mid-14-tab" data-bs-target="#pills-mid-14"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-14"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-15-tab" data-bs-target="#pills-mid-15" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-15" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
+                                        <button class="nav-link" id="pills-mid-15-tab" data-bs-target="#pills-mid-15"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-15"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-16-tab" data-bs-target="#pills-mid-16" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-16" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
+                                        <button class="nav-link" id="pills-mid-16-tab" data-bs-target="#pills-mid-16"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-16"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-17-tab" data-bs-target="#pills-mid-17" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-17" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
+                                        <button class="nav-link" id="pills-mid-17-tab" data-bs-target="#pills-mid-17"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-17"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-18-tab" data-bs-target="#pills-mid-18" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
+                                        <button class="nav-link" id="pills-mid-18-tab" data-bs-target="#pills-mid-18"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18"
+                                            aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link active" id="pills-mid-19-tab" data-bs-target="#pills-mid-19" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-19" aria-selected="false">
-                                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
+                                        <button class="nav-link active" id="pills-mid-19-tab"
+                                            data-bs-target="#pills-mid-19" data-bs-toggle="pill" type="button"
+                                            role="tab" aria-controls="pills-mid-19" aria-selected="false">
+                                            <img
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/19.png">
                                         </button>
                                     </li>
 
@@ -2795,10 +3088,12 @@
                     <div class="section-width">
                         <div class="product-list-custom-padding__1691658726756013023f">
                             <div class="product-list__container">
-                                <div class="product-list__product" product-id="6513edb153958f001d042434">
+                                <div class="product-list__product" product-id="65b30ab8dcd890001a2969cd">
 
                                     <div class="product-item">
-                                        <product-item product-id="6513edb153958f001d042434" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile" modal-window-class="">
+                                        <product-item product-id="65b30ab8dcd890001a2969cd"
+                                            ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
+                                            class="ng-scope quick-cart-mobile" modal-window-class="">
                                             <section class="bg bg_midoffer4">
                                                 <div class="content">
                                                     <!-- <img data-src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer4.webp"
@@ -2808,7 +3103,9 @@
                                                     alt=""> -->
                                                     <div class="cart_btn_layout">
                                                         <a href="#">
-                                                            <img class="animate__animated animate__pulse animate__infinite btn-add-to-cart js-btn-add-to-cart color-add-btn" data-src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp" alt="">
+                                                            <img class="animate__animated animate__pulse animate__infinite btn-add-to-cart js-btn-add-to-cart color-add-btn"
+                                                                data-src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/offer/midoffer-btn2.webp"
+                                                                alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -2822,19 +3119,15 @@
                 </div>
             </div>
 
-
-            <section class="bg bg_offer1">
-
-            </section>
             <div id="shopline-section-1691658726756013023f" class="shopline-section ">
 
                 <div class="section-width">
                     <div class="product-list-custom-padding__1691658726756013023f">
                         <div class="product-list__container">
-                            <div class="product-list__product" product-id="6513edb153958f001d042434">
+                            <div class="product-list__product" product-id="65b30ab8dcd890001a2969cd">
 
                                 <div class="product-item">
-                                    <product-item product-id="6513edb153958f001d042434"
+                                    <product-item product-id="65b30ab8dcd890001a2969cd"
                                         ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
                                         class="ng-scope quick-cart-mobile" modal-window-class="">
                                         <img class="btn-add-to-cart js-btn-add-to-cart"
