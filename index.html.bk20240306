@@ -150,7 +150,7 @@
     }
 
     .nav-pill_new .nav-item {
-        width: calc(100%/7);
+        width: calc(100%/5);
         padding: 1%;
         margin: 0;
     }
@@ -216,13 +216,10 @@
     .discount_price_text {
         word-wrap: break-word;
         font-size: 3.5rem;
-        color: #000000;
-        text-shadow: 2px 2px 4px rgb(128, 128, 128);
-        /* color: #ff3d3d; */
-        /* text-shadow: 2px 2px 4px #e68173; */
+        color: #ff3d3d;
         font-weight: 600;
+        text-shadow: 2px 2px 4px #e68173;
         padding-bottom: 20px;
-        line-height: 4.5rem;
     }
 
     .color-add-btn {
@@ -289,7 +286,6 @@
         .discount_price_text {
             font-size: 1.75rem;
             padding-bottom: 4px;
-            line-height: 2.5rem;
         }
 
         .color-add-btn {
@@ -766,19 +762,11 @@
                             <div class="price_text_box">
                                 <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                                <!-- <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
+                                <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
                                 <p class="discount_price_text">HKD$254<span
                                         style="word-break: keep-all;">(NT$980)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$106</p> -->
-
-                                <p class="discount_price_text">3/2-3/12 女神節快閃 <br>
-                                    <span style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span>
-                                </p>
-                                <p class="price_text">任選2件，1件只要HKD$322</p>
-                                <p class="price_text">任選3件，1件只要HKD$264</p>
-                                <p class="price_text">任選4件，1件只要HKD$259</p>
-                                <p class="price_text">任選5件，1件只要HKD$254</p>
+                                <p class="discount_price_text">現省HKD$106</p>
                             </div>
                             <img class="wow animate__fadeInUp animate__ animated"
                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt=""
@@ -789,7 +777,7 @@
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
                                     <div class="wow animate__fadeInUp animate__ animated"
-                                        style="width: 90%; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
+                                        style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-1-tab-1"
@@ -956,15 +944,9 @@
                     <div class="price_text_box">
                         <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                        <!-- <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
+                        <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
                         <span class="discount_price_text">HKD$254(NT$980)</span>
-                        <p class="discount_price_text">現省HKD$106</p> -->
-                        <p class="discount_price_text">3/2-3/12 女神節快閃 <span
-                                style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span></p>
-                        <p class="price_text">任選2件，1件只要HKD$322</p>
-                        <p class="price_text">任選3件，1件只要HKD$264</p>
-                        <p class="price_text">任選4件，1件只要HKD$259</p>
-                        <p class="price_text">任選5件，1件只要HKD$254</p>
+                        <p class="discount_price_text">現省HKD$106</p>
                     </div>
                     <div class="d-flex justify-content-center">
                         <img style="width: 90%; visibility: visible; animation-name: fadeInUp;"
@@ -1053,73 +1035,73 @@
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-10-tab-2"
-                                            data-bs-target="#pills-mid-10-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-10-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-10-tab-2" data-bs-target="#pills-mid-10-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-10-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-11-tab-2"
-                                            data-bs-target="#pills-mid-11-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-11-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-11-tab-2" data-bs-target="#pills-mid-11-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-11-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-12-tab-2"
-                                            data-bs-target="#pills-mid-12-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-12-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-12-tab-2" data-bs-target="#pills-mid-12-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-12-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-13-tab-2"
-                                            data-bs-target="#pills-mid-13-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-13-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-13-tab-2" data-bs-target="#pills-mid-13-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-13-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-14-tab-2"
-                                            data-bs-target="#pills-mid-14-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-14-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-14-tab-2" data-bs-target="#pills-mid-14-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-14-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-15-tab-2"
-                                            data-bs-target="#pills-mid-15-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-15-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-15-tab-2" data-bs-target="#pills-mid-15-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-15-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-16-tab-2"
-                                            data-bs-target="#pills-mid-16-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-16-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-16-tab-2" data-bs-target="#pills-mid-16-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-16-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-17-tab-2"
-                                            data-bs-target="#pills-mid-17-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-17-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-17-tab-2" data-bs-target="#pills-mid-17-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-17-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-18-tab-2"
-                                            data-bs-target="#pills-mid-18-2" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-18-2" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-18-tab-2" data-bs-target="#pills-mid-18-2"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18-2"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
                                         </button>
@@ -1309,7 +1291,7 @@
                     data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/13-item2.webp" alt="">
             </div>
         </section>
-        <!-- 
+<!-- 
         <section class="bg bg14-title">
             <div class="content">
                 <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs/bg/14-title.webp" alt="">
@@ -1682,7 +1664,8 @@
                                         </div>
                                         <div class="tab-pane" id="pills-mid-16-3" role="tabpanel"
                                             aria-labelledby="pills-mid-16-tab-3">
-                                            <img data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0306/model/16.webp
+                                            <img
+                                                data-src="https://lunanaturalbra.com/hk/lnubhk2/imgs_0306/model/16.webp
                                                 ">
                                         </div>
                                         <div class="tab-pane" id="pills-mid-17-3" role="tabpanel"
@@ -1713,18 +1696,11 @@
                             <div class="price_text_box">
                                 <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                                <!-- <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
+                                <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
                                 <p class="discount_price_text">HKD$254<span
                                         style="word-break: keep-all;">(NT$980)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$106</p> -->
-                                <p class="discount_price_text">3/2-3/12 女神節快閃 <br>
-                                    <span style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span>
-                                </p>
-                                <p class="price_text">任選2件，1件只要HKD$322</p>
-                                <p class="price_text">任選3件，1件只要HKD$264</p>
-                                <p class="price_text">任選4件，1件只要HKD$259</p>
-                                <p class="price_text">任選5件，1件只要HKD$254</p>
+                                <p class="discount_price_text">現省HKD$106</p>
                             </div>
                             <img class="wow animate__fadeInUp animate__ animated"
                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt=""
@@ -1735,7 +1711,7 @@
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
                                     <div class="wow animate__fadeInUp animate__ animated"
-                                        style="width: 90%;border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
+                                        style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-1-tab-3"
@@ -1747,7 +1723,7 @@
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-2-tab-3"
-                                                    data-bs-target="#pills-mid-2" -3 data-bs-toggle="pill" type="button"
+                                                    data-bs-target="#pills-mid-2"-3 data-bs-toggle="pill" type="button"
                                                     role="tab" aria-controls="pills-mid-2-3" aria-selected="false">
                                                     <img
                                                         src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/2.webp">
@@ -1902,15 +1878,9 @@
                     <div class="price_text_box">
                         <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                        <!-- <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
+                        <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
                         <span class="discount_price_text">HKD$254(NT$980)</span>
-                        <p class="discount_price_text">現省HKD$106</p> -->
-                        <p class="discount_price_text">3/2-3/12 女神節快閃 <span
-                                style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span></p>
-                        <p class="price_text">任選2件，1件只要HKD$322</p>
-                        <p class="price_text">任選3件，1件只要HKD$264</p>
-                        <p class="price_text">任選4件，1件只要HKD$259</p>
-                        <p class="price_text">任選5件，1件只要HKD$254</p>
+                        <p class="discount_price_text">現省HKD$106</p>
                     </div>
                     <div class="d-flex justify-content-center">
                         <img style="width: 90%; visibility: visible; animation-name: fadeInUp;"
@@ -1999,73 +1969,73 @@
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-10-tab-3"
-                                            data-bs-target="#pills-mid-10-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-10-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-10-tab-3" data-bs-target="#pills-mid-10-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-10-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/10.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-11-tab-3"
-                                            data-bs-target="#pills-mid-11-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-11-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-11-tab-3" data-bs-target="#pills-mid-11-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-11-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/11.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-12-tab-3"
-                                            data-bs-target="#pills-mid-12-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-12-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-12-tab-3" data-bs-target="#pills-mid-12-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-12-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/12.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-13-tab-3"
-                                            data-bs-target="#pills-mid-13-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-13-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-13-tab-3" data-bs-target="#pills-mid-13-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-13-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/13.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-14-tab-3"
-                                            data-bs-target="#pills-mid-14-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-14-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-14-tab-3" data-bs-target="#pills-mid-14-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-14-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/14.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-15-tab-3"
-                                            data-bs-target="#pills-mid-15-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-15-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-15-tab-3" data-bs-target="#pills-mid-15-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-15-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/15.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-16-tab-3"
-                                            data-bs-target="#pills-mid-16-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-16-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-16-tab-3" data-bs-target="#pills-mid-16-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-16-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/16.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-17-tab-3"
-                                            data-bs-target="#pills-mid-17-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-17-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-17-tab-3" data-bs-target="#pills-mid-17-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-17-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/17.webp">
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation" style="width: calc(100%/7);">
-                                        <button class="nav-link" id="pills-mid-18-tab-3"
-                                            data-bs-target="#pills-mid-18-3" data-bs-toggle="pill" type="button"
-                                            role="tab" aria-controls="pills-mid-18-3" aria-selected="false">
+                                        <button class="nav-link" id="pills-mid-18-tab-3" data-bs-target="#pills-mid-18-3"
+                                            data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-mid-18-3"
+                                            aria-selected="false">
                                             <img
                                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/color-chart/18.webp">
                                         </button>
@@ -2625,18 +2595,11 @@
                             <div class="price_text_box">
                                 <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                                 <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                                <!-- <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
+                                <p class="price_text">現金回饋3.8%，選購5件，1件低至</p>
                                 <p class="discount_price_text">HKD$254<span
                                         style="word-break: keep-all;">(NT$980)</span>
                                 </p>
-                                <p class="discount_price_text">現省HKD$106</p> -->
-                                <p class="discount_price_text">3/2-3/12 女神節快閃 <br>
-                                    <span style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span>
-                                </p>
-                                <p class="price_text">任選2件，1件只要HKD$322</p>
-                                <p class="price_text">任選3件，1件只要HKD$264</p>
-                                <p class="price_text">任選4件，1件只要HKD$259</p>
-                                <p class="price_text">任選5件，1件只要HKD$254</p>
+                                <p class="discount_price_text">現省HKD$106</p>
                             </div>
                             <img class="wow animate__fadeInUp animate__ animated"
                                 src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/midoffer-item3.webp" alt=""
@@ -2647,7 +2610,7 @@
 
                                     <!-- 顏色挑選按鈕(中間offer) -->
                                     <div class="wow animate__fadeInUp animate__ animated"
-                                        style="width: 90%; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
+                                        style="width: 90%; padding-left: 32px; padding-right: 32px; border-radius: 10px; background: rgb(255, 233, 222); margin-top: 8px; visibility: visible; animation-name: fadeInUp;">
                                         <ul class="nav nav-pills nav-pill_new" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-mid-1-tab"
@@ -2814,15 +2777,9 @@
                     <div class="price_text_box">
                         <h2 class="price_text_title" style="color:#000000">LUNA美媞晚安內衣</h2>
                         <p class="normal_price_text">原價HKD$360(NT$1390)</p>
-                        <!-- <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
+                        <span class="price_text">現金回饋3.8%，選購5件，1件低至</span>
                         <span class="discount_price_text">HKD$254(NT$980)</span>
-                        <p class="discount_price_text">現省HKD$106</p> -->
-                        <p class="discount_price_text">3/2-3/12 女神節快閃 <span
-                                style="color: #ff3d3d;text-shadow: 2px 2px 4px #e68173;">現金回贈3.8%</span></p>
-                        <p class="price_text">任選2件，1件只要HKD$322</p>
-                        <p class="price_text">任選3件，1件只要HKD$264</p>
-                        <p class="price_text">任選4件，1件只要HKD$259</p>
-                        <p class="price_text">任選5件，1件只要HKD$254</p>
+                        <p class="discount_price_text">現省HKD$106</p>
                     </div>
                     <div class="d-flex justify-content-center">
                         <img style="width: 90%; visibility: visible; animation-name: fadeInUp;"
@@ -3176,4 +3133,4 @@
             observer.observe(img);
         });
     });
-</script>
+</script> 
