@@ -2968,7 +2968,4 @@
             observer.observe(img);
         });
     });
-
-    // 跳轉網頁
-    window.location.assign(`https://www.lunabrahk.com/pages/lnubhkvb2/${location.search}`);
 </script>
