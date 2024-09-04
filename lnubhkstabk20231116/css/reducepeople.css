@@ -1,0 +1,41 @@
+.people-number {
+    position: absolute;
+    left: 44%;
+    bottom: 54.5%;
+
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .people-number {
+        left: 51%;
+        bottom: 48%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .people-number {
+        left: 52.5%;
+        bottom: 51.5%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .people-number {
+        left: 53.5%;
+        bottom: 51.5%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .people-number {
+        left: 56%;
+        bottom: 50.5%;
+        font-size: 12px;
+    }
+}
