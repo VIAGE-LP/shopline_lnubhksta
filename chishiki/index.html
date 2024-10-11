@@ -1,0 +1,751 @@
+<!-- ▼自由編集箇所▼ -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/chishiki/css/bootstrap-grid.css"> -->
+<!-- <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Noto+Serif+TC:wght@700&display=swap"
+    rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/chishiki/css/bootstrap_custom.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap_custom.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/chishiki/css/carousel.css">
+    <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/chishiki/css/loading.css">
+    <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/chishiki/css/style.css">
+    <!-- shopline offer css -->
+    <style>
+        /* 隱藏第一個商品列表 */
+        div#shopline-section-1691658726756013023f:nth-child(1) {
+            display: none !important;
+        }
+    
+        #product-list__products__1691658726756013023f {
+    
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    
+        .product-list-custom-padding__1691658726756013023f {
+            padding: 1px;
+        }
+    
+    
+        @media screen and (max-width: 767px) {
+            .product-list-custom-padding__1691658726756013023f {
+                padding: 0;
+            }
+    
+            #product-list__products__1691658726756013023f {
+                display: block;
+                grid-template-columns: 100%;
+                grid-template-rows: initial;
+            }
+        }
+    </style>
+    
+    <!-- shopline相關css -->
+    <style>
+        .header {
+            z-index: 100;
+        }
+    
+        .header--desktop .header__container {
+            position: fixed;
+            background-color: white;
+            left: 50%;
+            margin-left: -700px;
+            width: 1400px;
+            max-width: 100%;
+            min-height: 103px;
+            padding: 10px 20px 0;
+            display: flex;
+        }
+    
+        @media screen and (max-width: 1400px) {
+            .header--desktop .header__container {
+                left: 0;
+                margin-left: 0;
+                margin: 0 auto;
+            }
+        }
+    
+        .header--mobile .header__menu {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        #wrapper {
+            margin-top: 103px;
+        }
+    
+        @media screen and (max-width: 1200px) {
+            #wrapper {
+                margin-top: 60px;
+            }
+        }
+    
+        /* 隱藏電腦版商品資訊標籤 */
+        .quick-cart-body .variant-gallery-stage>a:last-child {
+            display: none;
+        }
+    
+        /* 隱藏手機版商品資訊標籤 */
+        a.ng-binding {
+            display: none;
+        }
+    
+        .CustomPage .quick-cart-price {
+            display: none;
+        }
+    
+        /* 隱藏頁尾灰底 */
+        .footer-grid-item {
+            display: none;
+        }
+    </style>
+    
+    <!-- 客製化區塊css -->
+    <style>
+        .LP {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 2em;
+            font-weight: 300;
+            font-size: 1.4em;
+            text-align: justify;
+            word-wrap: break-word;
+        }
+    
+        .LP p {
+            line-height: 40px;
+            font-size: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    
+        header {
+            top: 1%;
+            left: 0%;
+        }
+    
+        @media screen and (max-width: 450px) {
+            header {
+                top: 1%;
+                left: 10%;
+            }
+        }
+    
+        .tab-pane {
+            padding: 0px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            .tab-pane {
+                padding: 0px;
+            }
+        }
+    
+        .nav-pill_new .nav-item {
+            width: calc(100%/8);
+            padding: 1%;
+            margin: 0;
+        }
+    
+        .bg_modelCarousel--mid .row>* {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            margin-top: var(--bs-gutter-y);
+        }
+    
+        .sizelinkbtn {
+            position: fixed;
+            right: 0;
+            bottom: 8px;
+            z-index: 99;
+            width: 150px;
+            cursor: pointer;
+        }
+    
+        @media screen and (max-width: 768px) {
+            .sizelinkbtn {
+                width: 24%;
+                max-width: 170px;
+            }
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+    
+        .CP {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-left: rgb(201, 201, 201) solid thin;
+            border-right: rgb(201, 201, 201) solid thin;
+            padding: 0 5em;
+        }
+    
+    
+        #fv_pic {
+            max-width: 1100px;
+            margin: 0 auto;
+            border-left: white solid 3px;
+            border-right: white solid 3px;
+        }
+    
+        #fv_pic img {
+            width: 100%;
+        }
+    
+        #content {
+            padding: 2em 0 3em 0;
+        }
+    
+        #content p {
+            margin: 0.7em 0;
+        }
+    
+        #content hr {
+            height: 1.3px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            margin: 0.5em 0;
+    
+        }
+    
+        .part {
+            margin-bottom: 4em;
+        }
+    
+    
+        /* 本文字體設定 */
+    
+        #title {
+            font-weight: bold;
+            font-size: 2.3em;
+            line-height: 1.7em;
+            letter-spacing: 0.1em;
+            text-align: center;
+            margin: 1em 0;
+        }
+    
+        #intro {
+            color: rgb(90, 90, 90);
+            font-size: 1em;
+            line-height: 2em;
+            padding: 3% 10%;
+        }
+    
+        .headline1 {
+            font-weight: 900;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            letter-spacing: 0.1em;
+        }
+    
+        .headline2 {
+            font-weight: 600;
+            letter-spacing: 0.1em;
+    
+        }
+    
+        .txt_point {
+            color: rgb(230, 67, 162);
+            font-weight: 500;
+        }
+    
+        .txt_orange {
+            color: rgb(230, 132, 67);
+            font-weight: 500;
+        }
+    
+        a p {
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+    
+        a p:hover {
+            padding-left: 3em;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+    
+        .link {
+            /* 漸層背景 */
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ed7892+0,b772c1+51,5f9ae2+100 */
+            background: #ed7892;
+            /* Old browsers */
+            background: -moz-linear-gradient(left, #ed7892 0%, #b772c1 51%, #5f9ae2 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #ed7892 0%, #b772c1 51%, #5f9ae2 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #ed7892 0%, #b772c1 51%, #5f9ae2 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ed7892', endColorstr='#5f9ae2', GradientType=1);
+            /* IE6-9 */
+            /* 漸層附加上文字
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+            color: white;
+            font-weight: 400;
+            font-size: 1.15em;
+            letter-spacing: 0.1em;
+            padding: 0.3em 1em;
+            margin: 1.5em 0;
+        }
+    
+        a img {
+            width: 70%;
+        }
+    
+    
+        /* RWD設定 */
+    
+        @media screen and (max-width: 1100px) {
+            .CP {
+                margin: 0 auto;
+                border-left: none;
+                border-right: none;
+                padding: 0 4em;
+            }
+    
+            #fv_pic {
+                border-left: none;
+                border-right: none;
+            }
+    
+            #title {
+                font-size: 2em;
+                line-height: 1.7em;
+                margin: 1em 0;
+            }
+        }
+    
+        @media screen and (max-width: 900px) {
+            .CP {
+                padding: 0 3em;
+            }
+    
+            #title {
+                font-size: 1.8em;
+            }
+        }
+    
+        @media screen and (max-width: 700px) {
+            body {
+                line-height: 1.75em;
+                font-size: 1.2em;
+            }
+    
+            .CP {
+                padding: 0 2em;
+            }
+    
+            #title {
+                font-size: 1.8em;
+            }
+        }
+    
+        @media screen and (max-width: 600px) {
+            .CP {
+                padding: 0 1em;
+            }
+    
+            #title {
+                font-size: 1.4em;
+            }
+    
+            #intro {
+                font-size: 1em;
+                line-height: 1.8em;
+                padding: 4% 5%;
+            }
+    
+            #content {
+                padding: 2em 0 2em 0;
+            }
+    
+            .part {
+                margin-bottom: 3em;
+            }
+        }
+    
+        @media screen and (max-width:500px) {
+            body {
+                font-weight: 400;
+            }
+    
+            a img {
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width:400px) {
+            #title {
+                font-size: 1.2em;
+                letter-spacing: 0em;
+            }
+        }
+    
+        .btn {
+            animation: btn 2s ease infinite;
+            text-align: center;
+        }
+    
+        .btn img {
+            width: 80%;
+        }
+    
+        @keyframes btn {
+            0% {
+                transform: scale(1);
+            }
+    
+            50% {
+                transform: scale(1.2);
+            }
+    
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    
+    <!-- <script src="https://viage-lp.github.io/shopline_lnubhksta/chishiki/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#logo-001').fadeIn();
+            setTimeout(function () {
+                $('.loading-all').fadeOut()
+            }, 650);
+        });
+    </script>
+    
+    <div id="wrapper">
+        <!-- <div class="loading-all">
+        <img id="logo-001" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/logo.png">
+        <p class="loading_txt">優惠價格loading...</p>
+        <div>
+          <div class="loading-outer">
+            <div class="loading-inner">
+    
+            </div>
+          </div>
+        </div>
+      </div> -->
+        <!--手機漢堡menu-->
+        <!-- <div id="hamburger">
+            <header>
+                <div id="nav-icon">
+                    <div id="icon_bg">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+    
+            </header>
+    
+            <div class="menu">
+                <ul>
+                    <div id="li_right">
+                        <li><a class="scrollLink" href="#target1">IG瘋傳</a></li>
+                        <li><a class="scrollLink" href="#target2">6大特色</a></li>
+                        <li><a class="scrollLink" href="#target3">問題Q&A</a></li>
+                        <li><a class="scrollLink" href="#offer">馬上訂購</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div> -->
+        <div class="LP">
+            <div id="fv">
+                <div id="fv_pic">
+                    <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/banner.jpg">
+                </div>
+            </div>
+    
+            <div class="CP">
+    
+                <p id="title">5個只有小胸女才懂的困擾！教你怎麼穿才集中，空杯也能豐滿起來！</p>
+    
+                <hr>
+                <div id="intro">
+                    <p>
+                        對罩杯介於A~C的女孩來說，穿內衣很容易空杯，只希望胸部可以再集中一點！事實上問題不在大小，而是胸型惹得禍！
+                        本篇盤點5個只有小胸女才懂的困擾，如果符合2個以上請看到最後！教你如何越穿越集中，打造出豐滿的視覺D罩杯！
+    
+    
+                    </p>
+                </div>
+                <hr>
+    
+                <div id="content">
+                    <div class="part">
+                        <p>
+                        <div class="headline1">#小胸女的5大困擾，你中了幾個？</div>
+    
+                        </p>
+    
+                        <p>1. 不管怎麼喬，胸部總是動一動就空杯？ <br>
+                            2. 上胸無肉，都跑去當副乳了？！ <br>
+                            3. 低頭一看，肚子比胸部還大？ <br>
+                            4. 胸型扁塌外擴，視覺看起來變小了！ <br>
+                            5. 撐不起低胸衣服，性感都與我無關！
+    
+    
+                        </p>
+                        <p>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/01.jpg">
+                        </p>
+                    </div>
+    
+                    <div class="part">
+    
+                        <p>
+                        <div class="headline1">#這些方法你也都試過了嗎？</div>
+    
+                        </p>
+    
+                        <p><b>餐餐都吃豐胸飲食，卻好像沒吃進胸部裡</b><br>
+                            明明每天都努力補充膠原蛋白，「豆類、海鮮、肉類、膠質」一個都不放過，但卻好像都沒有補到胸部。
+                        </p>
+                        <p><b>花大錢去胸部按摩，成長好像若有似無</b><br>
+                            尋求各種胸部按摩刺激乳腺，幾個月後好像胸部有變大，但是形狀不好看，看起來外擴下垂的沒有豐滿的感覺。
+                        </p>
+                        <hr>
+                    </div>
+    
+                    <div class="part">
+                        <p>
+                        <div class="headline1">#你知道嗎？其實睡眠時的胸型支撐固定最有效率！</div>
+                        </p>
+                        <p>
+                        <p>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/03.jpg">
+                        </p>
+                        </p>
+    
+                        <p>很多女生晚上睡覺時不喜歡穿內衣，因為有鋼圈的內衣容易造成不適感，且會導致循環不良。</p>
+    
+    
+                        <p>其實晚上穿專用的晚安內衣不但不會感到壓迫緊繃，還能在睡眠時幫胸部矯型，讓豐胸之路事半功倍！睡覺時若沒有好好地支撐固定胸型，無論前面如何豐胸飲食、胸部按摩都很容易造成胸部外擴下垂，讓努力都白費！
+    
+                        </p>
+                    </div>
+    
+    
+                    <div class="part">
+                        <div class="headline1">#把握睡眠美胸黃金時刻！<br> A罩杯也能輕鬆滿杯！</div>
+                        <p>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/04.jpg">
+                        </p>
+    
+                        <p><span class="txt_point">Q：小胸女內衣好難買，想要豐滿集中不空杯，該怎麼挑選內衣呢？</span>
+                            <br>A: 日本針對<span class="txt_orange">A-C罩杯小胸女</span>對於內衣的煩惱，研發出一種新型態的內衣：
+                            <br><span class="txt_orange">「LUNA美媞晚安內衣」--杜絕小胸空杯，完整包覆集中調整。</span>
+                            <br>之所以稱為「晚安內衣」，就是因為晚上睡覺時也可以穿著保養 (日夜可穿) ，
+                            <br>就不怕睡覺時翻滾讓胸型山崩囉！還可以利用睡眠的黃金時間改善胸型收副乳！
+    
+                        </p>
+                        <a id="lnk_1" pastr="kiji01-lplnubhk" href="https://www.lunabrahk.com/pages/lnubhksta">
+                            <p style="text-align: center" class="btn">
+                                <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/05.jpg">
+                            </p></a>
+                    </div>
+    
+    
+    
+                    <div class="part">
+    
+    
+                        <div class="headline1">#【小胸女專用內衣】<br><span class="txt_point">怎麼穿都滿杯</span>秘笈揭曉</div>
+    
+                        <p class="txt_point">
+                            ①日本專利--內衣下擺做止滑條設計
+                        </p>
+                        <div>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/06.gif">
+                        </div>
+                        <p>側躺的時候也能將胸部都支撐好，完全沒有壓迫跟垂墜感！ <br>
+                            胸部再也不會因重力而亂跑位，晚上睡覺翻身也能時刻保持胸型。 <br>
+                            背面是一片式完整包覆，能夠應付側躺、翻身等各種睡姿！
+                        </p>
+                        <p class="txt_point">
+                            ②100%無鋼圈，超彈力不緊繃
+                        </p>
+                        <div>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/07.gif">
+                        </div>
+                        <p> 就算穿著按摩、輕度訓練的時候也都沒問題！ <br>
+                            甚至和其他內衣比較，集中度也是超級完勝 <br>
+                            特殊的剪裁設計讓無鋼圈也能集中托高
+                        </p>
+                        <p class="txt_point">
+                            ③內有活動式貼合內襯
+                        </p>
+                        <div>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/08.gif">
+                        </div>
+                        <p class="part">有別於一般內衣厚墊只是增加份量感卻無法固定好胸部，容易因為跑位而空杯！
+                            LUNA美媞晚安內衣的手捧式胸墊能夠完美貼合胸型，怎麼翻身動作都不會走位！
+                        </p>
+                        <br>
+                        <p class="part">
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/09.jpg">
+                        </p>
+                        <p>尤其是因為這款LUNA是針對A-C罩杯的女性設計 <br>
+                            所以在功能性和機能性都做得比較完全， <br>
+                            像是針對女性們最在意的副乳，有做側邊加高的設計 <br>
+                            隱藏式洗標以及減壓的寬肩帶設計都大大增加了穿著的舒適度！
+                        </p>
+                    </div>
+    
+                    <div class="part">
+                        <p>這款因為「小胸空杯救星」的頭銜而造成話題的
+                            <span class="headline2">＂LUNA晚安內衣＂</span><br>
+                            在Instagram上瘋傳的實穿心得都是一致好評！
+                        </p>
+                        <div>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/10.gif">
+                        </div>
+                        <p>消費者的真實體驗： <br>
+                            「不僅讓副乳收復，外擴空杯走山奶也改善很多！」 <br>
+                            「蕾絲設計超性感！一點都沒有機能內衣的樸素感！」 <br>
+                            「胸部變得集中又堅挺，身邊的姊妹都在穿！」
+                        </p>
+                    </div>
+    
+                    <div class="part">
+                        <div class="headline1">
+                            #本篇讀者限定優惠！<br> 獻給下定決心擺脫小胸空杯的妳！
+                        </div>
+                        <p>從今天起，丟掉不合身的內衣，穿上專屬自己的美胸內衣吧！</p>
+                        <p>
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/11.jpg">
+                        </p>
+                        <p>
+    
+                            <span class="headline2">【香港新客限定，單件即免運】</span> <br>
+                            LUNA美媞晚安內衣一共出了14種夢幻顏色 <br>
+                            最高每件省<span class="txt_point">HKD$ 96</span>，組合更送專用洗衣袋！
+    
+                        </p>
+                        <p>點擊下方連結，獲得本篇讀者專屬的<span class="txt_point">73折</span>優惠！</p>
+                        <a id="lnk_1" pastr="kiji01-lplnubhk" href="https://www.lunabrahk.com/pages/lnubhksta">
+                            <p style="text-align: center" class="btn">
+                            <img src="https://lunanaturalbra.com/hk/cp_chishiki/images/05.jpg">
+                        </p></a>
+                    </div>
+    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+    <script>
+        // $(document).ready(function () {
+        //     /*手機切換漢堡選單*/
+        //     $(".menu").hide();
+        //     $('#nav-icon').click(function () {
+        //         $(this).toggleClass('open');
+        //         $(".menu").slideToggle("normal");
+        //     });
+        //     $(".menu > ul > div > li > a.scrollLink").click(function (event) {
+        //         $('#nav-icon').toggleClass('open');
+        //         $(".menu").slideToggle("normal");
+        //     });
+    
+        //     /*畫面跳到指定位置*/
+        //     $("a.scrollLink").click(function (event) {
+        //         event.preventDefault();
+        //         $("html, body").animate({
+        //             scrollTop: ($($(this).attr("href")).offset().top - 0)
+        //         }, 400);
+        //     });
+        // });
+    </script>
+    
+    <script>
+        function toggleContent(e) {
+            var Content = document.querySelector(`${e}`);
+    
+            if (Content.style.maxHeight) {
+                Content.style.maxHeight = null;
+            } else {
+                Content.style.maxHeight = Content.scrollHeight + "px";
+            }
+        }
+    </script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+      </script> -->
+    <script src="https://viage-lp.github.io/shopline_lnubhksta/chishiki/js/bootstrap_custom.js"></script>
+    <!-- <script src="js/bootstrap_custom.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            let items = document.querySelectorAll(".carousel .carousel-item");
+    
+            items.forEach((el) => {
+                const minPerSlide = 3
+                let next = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    if (!next) {
+                        // wrap carousel by using first child
+                        next = items[0]
+                    }
+                    let cloneChild = next.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next.nextElementSibling
+                }
+    
+            })
+        });
+    </script>
+    <script>
+        // 點選左上角logo不跳轉
+        $('a[href="/"]').click(function (e) {
+            e.preventDefault();
+            return;
+        });
+    
+        // 點選下方商品列表不跳轉
+        $('a[href*="https://www.lunabrahk.com/products/"]').click(function (e) {
+            e.preventDefault();
+            return;
+        });
+    
+        // 提示購物車按鈕電腦版/手機版
+        var width = $(window).width();
+        if (width <= 1000) {
+            $("div.title.text-primary-color").text("▼點擊加入購物車▼");
+        } else {
+            $("div.title.text-primary-color").text("▲點擊加入購物車▲");
+        }
+    
+    </script>
